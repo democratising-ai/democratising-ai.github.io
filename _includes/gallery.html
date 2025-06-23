@@ -1,0 +1,194 @@
+{% comment %}- ASSIGN SEPARATOR -{% endcomment %}
+{% assign separator = "|" %}
+
+{% comment %}- SET NUMBER OF COLUMNS -{% endcomment %}
+{% if include.num_column %}
+{% assign min_column_width = 12 | divided_by: include.num_column %}
+{% else %}
+{% assign min_column_width = 6 %}
+{% endif %}
+
+{% comment %}- SUBSET PARSING -{% endcomment %}
+{% if include.field and include.value %}
+{% assign collection = site[include.collection] | where: include.field, include.value | sort: 'order' %}
+{% else %}
+{% assign collection = site[include.collection] %}
+{% endif %}
+
+<div class="full-width-gallery-layout">
+  {% comment %} :::: LEFT SIDEBAR FACETS :::: {% endcomment %}
+  {% if include.facet_by %}
+  <div class="sidebar-filters-external">
+    <div class="filters-sticky">
+      <h4 class="filters-title">Filter Results</h4>
+
+      <form id="facets">
+        {% assign facet_list = include.facet_by | split: "|" %}
+        {% for facet in facet_list %}
+        {% if facet contains "*" %}
+        {% assign facet_name = facet | remove: "*" %}
+        {% assign multi_value = true %}
+        {% else %}
+        {% assign facet_name = facet %}
+        {% assign multi_value = false %}
+        {% endif %}
+
+        {% assign original_options = collection | map: facet_name | compact %}
+        {% assign all_values = '' | split: ',' %}
+
+        {% for option in original_options %}
+        {% if option.first %}
+        {% for value in option %}
+        {% assign all_values = all_values | push: value %}
+        {% endfor %}
+        {% elsif multi_value and option contains separator %}
+        {% assign split_values = option | split: separator %}
+        {% for value in split_values %}
+        {% assign all_values = all_values | push: value %}
+        {% endfor %}
+        {% else %}
+        {% assign all_values = all_values | push: option %}
+        {% endif %}
+        {% endfor %}
+
+        {% assign facet_values = all_values | compact | uniq %}
+        {% if facet_values.size > 0 %}
+        {% assign facet_values = facet_values | sort %}
+        {% endif %}
+
+        <fieldset id="{{ facet_name | slugify }}-set" class="card m-1 facet-card">
+          <div class="facet-header card-header">
+            <a class="facet-bn" data-toggle="collapse" href="#{{ facet_name | slugify }}-collapse" role="button"
+              aria-expanded="true" aria-controls="{{ facet_name | slugify }}-collapse">
+              <legend>{{ facet_name | replace: "_", " " | capitalize }}
+                <span aria-hidden="true" class="facets-chevron facets-chevron-top float-right ml-2"></span>
+              </legend>
+            </a>
+          </div>
+          <div class="collapse show" id="{{ facet_name | slugify }}-collapse">
+            <div class="card-body">
+              {% for value in facet_values %}
+              {% if value != "" %}
+              {% comment %}- Get count for this value -{% endcomment %}
+              {% assign count = 0 %}
+              {% for item in collection %}
+              {% assign item_values = item[facet_name] %}
+              {% assign has_value = false %}
+              {% if item_values.first %}
+              {% for item_value in item_values %}
+              {% if item_value == value %}
+              {% assign has_value = true %}
+              {% break %}
+              {% endif %}
+              {% endfor %}
+              {% elsif item_values == value %}
+              {% assign has_value = true %}
+              {% endif %}
+              {% if has_value %}
+              {% assign count = count | plus: 1 %}
+              {% endif %}
+              {% endfor %}
+
+              <div class="facet-item">
+                <input id="{{ value | slugify }}" class="{{ facet_name | slugify }}" type="checkbox" name="{{ value }}"
+                  value="{{ value }}" data-facet="{{ facet_name | slugify }}" />
+                <label for="{{ value | slugify }}">{{ value }} <span class="facet-count">({{ count }})</span></label>
+              </div>
+              {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </fieldset>
+        {% endfor %}
+      </form>
+    </div>
+  </div>
+  {% endif %}
+
+  {% comment %} :::: MAIN CONTENT AREA :::: {% endcomment %}
+  <div class="main-content-with-sidebar">
+    <!-- THE GALLERY -->
+    <div class="wax-gallery-container full-width" id="wax-gallery-{{ include.value | slugify }}-container">
+      <div class="wax-inline-container">
+        <div class="wax-gallery" id="wax-gallery-{{ include.value | slugify }}">
+          <div class="row">
+            {% for item in collection %}
+            <div class="gallery-item-facets
+            {% if include.facet_by %}
+            {% assign facet_list = include.facet_by | split: separator %}
+            {% for facet in facet_list %}
+            {% assign facet_name = facet %}
+            {% assign multi_value = false %}
+            {% if facet contains " *" %} {% assign facet_name=facet | remove: "*" %} {% assign multi_value=true %} {%
+              endif %} {% assign item_values=item[facet_name] %} {% if item_values.first %} {% for value in item_values
+              %} {{ value | slugify }} {% endfor %} {% elsif multi_value and item_values contains separator %} {% assign
+              split_values=item_values | split: separator %} {% for value in split_values %} {{ value | slugify }} {%
+              endfor %} {% elsif item_values %} {{ item_values | slugify }} {% endif %} {% endfor %} {% endif %}"
+              data-user-group="{% if item.user_group %}{% for group in item.user_group %}{{ group | slugify }} {% endfor %}{% endif %}"
+              data-technology="{% if item.technology %}{% for tech in item.technology %}{{ tech | slugify }} {% endfor %}{% endif %}"
+              data-issues="{% if item.issues %}{% for issue in item.issues %}{{ issue | slugify }} {% endfor %}{% endif %}">
+
+              <div class="card thumbnail-card">
+                {% if item.thumbnail %}
+                <img class="card-img-top gallery-thumb" src="{{ item.thumbnail | relative_url }}"
+                  alt="{{ item.label | default: item.title }}" />
+                {% endif %}
+
+                <div class="card-body">
+                  <a href="{{ item.url | relative_url }}">
+                    <h3 class="card-title">{{ item.label | default: item.title }}</h3>
+                  </a>
+
+                  {% if include.collection == 'posts' %}
+                  <p class="card-text">
+                    {% if item.excerpt %}
+                    {{ item.excerpt | strip_html | truncatewords: 30 }}
+                    {% endif %}
+                    <br><br>
+
+                    {% if item.user_group %}
+                    <strong>For:</strong>
+                    {% if item.user_group.first %}
+                    {{ item.user_group | join: ", " }}
+                    {% else %}
+                    {{ item.user_group }}
+                    {% endif %}
+                    <br>
+                    {% endif %}
+
+                    {% if item.technology %}
+                    <strong>Tech:</strong>
+                    {% if item.technology.first %}
+                    {{ item.technology | join: ", " }}
+                    {% else %}
+                    {{ item.technology }}
+                    {% endif %}
+                    <br>
+                    {% endif %}
+
+                    {% if item.issues %}
+                    <strong>Issues:</strong>
+                    {% if item.issues.first %}
+                    {{ item.issues | join: ", " }}
+                    {% else %}
+                    {{ item.issues }}
+                    {% endif %}
+                    {% endif %}
+                  </p>
+                  {% else %}
+                  <p class="card-text">
+                    {% if item.object_type and item.location and item._date %}
+                    A {{ item.object_type }} from {{ item.location }} ({{ item._date }}).
+                    {% endif %}
+                  </p>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div> <!-- /.row -->
+        </div> <!-- /.wax-gallery -->
+      </div> <!-- /.wax-inline-container -->
+    </div> <!-- /.wax-gallery-container -->
+  </div> <!-- /.main-content-with-sidebar -->
+</div> <!-- /.full-width-gallery-layout -->

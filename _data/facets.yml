@@ -1,0 +1,14 @@
+user_group:
+  label: "User Group"
+  multiple: true
+  property: user_group
+
+technology:
+  label: "Technology"
+  multiple: true
+  property: technology
+
+issues:
+  label: "Issues"
+  multiple: true
+  property: issues

@@ -8,9 +8,60 @@ description: "About AI, technology, and society."
 baseurl: ""
 url: ""
 
+wax:
+  facets:
+    source: _data/facets.yml
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+collections:
+  posts:
+    output: true
+    permalink: /posts/:title/
+
+# SEARCH INDEX SETTINGS
+# You can create multiple search indexes below (though only one is recommended!) by specifying
+# an `index` file to write it to and some `collections` for it to index
+# and running `$ bundle exec rake wax:search` .
+
+search:
+  main:
+    index: "/search/index.json"
+    collections:
+      posts:
+        content: true
+        fields:
+          - title
+          - year
+          - issues
+          - technology
+          - user_group
+
 menu:
   - label: "Home"
     link: "/"
+  - label: "News"
+    link: "/posts/"
+  - label: "Research"
+    sub:
+      - label: "Research Team"
+        link: "/research_team/"
+      - label: "Papers"
+        link: "/papers/"
+      - label: "Project 1"
+        link: "/project1/"
+      - label: "Project 2"
+        link: "/project2/"
+  - label: "Learn and Toolkit"
+    sub:
+      - label: "All Resources"
+        link: "/all_resources/"
+      - label: "Widgets"
+        link: "/widgets/"
+  - label: "Search"
+    link: "/search/"
   - label: "About"
     link: "/about/"
 

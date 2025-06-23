@@ -1,0 +1,12 @@
+search:
+  main:
+    index: "/search/index.json"
+    collections:
+      posts:
+        content: true
+        fields:
+          - title
+          - year
+          - issues
+          - technology
+          - user_group

@@ -3,6 +3,23 @@ layout: page
 permalink: /about/
 title: "About"
 author: false
+
+gallery:
+  - url: https://www.uts.edu.au/
+    image_path: /assets/images/UTS-logo.png
+    alt: "UTS logo"
+  - url: https://www.qut.edu.au/
+    image_path: /assets/images/Queensland-University-of-Technology-logo.png
+    alt: "QUT logo"
+  - url: https://www.unisa.edu.au/
+    image_path: /assets/images/University-of-South-Australia-logo.png
+    alt: "UniSA logo"
+  - url: https://sydney.edu.au/
+    image_path: /assets/images/University-of-Sydney-logo.png
+    alt: "UniSyd logo"
+  - url: https://www.uta.edu/uta/
+    image_path: /assets/images/University-of-Texas-logo.png
+    alt: "UniTexas logo"
 ---
 
 Artificial Intelligence (AI) is reshaping industries, accelerating discovery, and changing the way we live and work. But the tools and platforms driving this transformation are often locked behind technical complexity, proprietary systems, and costly infrastructure. This is great—if you're a large company with dedicated AI teams and resources. But what about the rest of us?
