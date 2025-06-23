@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  {% if page.gallery %}
+  <div class="gallery">
+    {% for item in page.gallery %}
+    <a href="{{ item.url }}">
+      <img src="{{ item.image_path }}" alt="{{ item.alt }}" width="200" style="margin: 10px;">
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+</article>

@@ -1,0 +1,39 @@
+<!-- User Preference Indicator -->
+<div id="user-preference-indicator" class="alert alert-light border-left-primary" style="display: none;">
+    <div class="d-flex justify-content-between align-items-center">
+        <small>
+            <i class="fas fa-user-tag mr-1"></i>
+            Showing content for: <strong id="preference-group"></strong>
+            <a href="#" id="change-preference" class="ml-2">change</a>
+        </small>
+        <button type="button" class="close" id="clear-preference">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        function showUserPreference() {
+            var userGroup = sessionStorage.getItem('preferred_user_group');
+            if (userGroup && !window.location.search.includes('usergroup=')) {
+                var groupName = userGroup.charAt(0).toUpperCase() + userGroup.slice(1);
+                $('#preference-group').text(groupName);
+                $('#user-preference-indicator').show();
+            }
+        }
+
+        $('#change-preference').click(function (e) {
+            e.preventDefault();
+            // Redirect to main page to choose new preference
+            window.location.href = '/';
+        });
+
+        $('#clear-preference').click(function () {
+            sessionStorage.removeItem('preferred_user_group');
+            $('#user-preference-indicator').hide();
+        });
+
+        showUserPreference();
+    });
+</script>

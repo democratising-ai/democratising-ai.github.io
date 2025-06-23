@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<article class="post">
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+    </header>
+
+    <div class="post-content">
+        {{ content }}
+    </div>
+
+    <div class="post-footer">
+        <h4>Related Topics In</h4>
+        <div class="post-topic-links">
+            {% if page.user_group %}
+            {% for group in page.user_group %}
+            <a href="{{ '/posts/' | relative_url }}?usergroup={{ group | slugify }}" class="badge badge-primary">{{
+                group }}</a>
+            {% endfor %}
+            {% endif %}
+
+            {% if page.technology %}
+            {% for tech in page.technology %}
+            <a href="{{ '/posts/' | relative_url }}?tech={{ tech | slugify }}" class="badge badge-info">{{ tech }}</a>
+            {% endfor %}
+            {% endif %}
+
+            {% if page.issues %}
+            {% for issue in page.issues %}
+            <a href="{{ '/posts/' | relative_url }}?issue={{ issue | slugify }}" class="badge badge-warning">{{ issue
+                }}</a>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</article>

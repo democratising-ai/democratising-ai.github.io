@@ -1,0 +1,23 @@
+title: Democratising AI
+logo: "/assets/logo/logo.svg"
+subtitle: In the Brave New World
+author:
+  name:
+  email:
+description: "About AI, technology, and society."
+baseurl: ""
+url: ""
+
+menu:
+  - label: "Home"
+    link: "/"
+  - label: "About"
+    link: "/about/"
+
+# _config.yml production settings
+safe: true
+lsi: false
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
