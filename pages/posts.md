@@ -141,7 +141,7 @@ $(document).ready(function() {
     }
 
     // Update URL
-    var newUrl = window.location.pathname;
+    var newUrl = '{{ site.baseurl }}/posts/';
     if (params.length > 0) {
       newUrl += '?' + params.join('&');
     }
