@@ -5,7 +5,7 @@ author:
   name:
   email:
 description: "About AI, technology, and society."
-baseurl: "democratising-ai"
+baseurl: "/democratising-ai"
 url: ""
 
 wax:
