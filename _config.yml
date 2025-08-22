@@ -5,12 +5,64 @@ author:
   name:
   email:
 description: "About AI, technology, and society."
-baseurl: "/democratising-ai"
-url: ""
+baseurl: ""
+url: "https://democratising-ai.github.io"
+
+wax:
+  facets:
+    source: _data/facets.yml
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+collections:
+  posts:
+    output: true
+    permalink: /posts/:title/
+  tools:
+    output: true
+    permalink: /tools/:name/
+
+# SEARCH INDEX SETTINGS
+# You can create multiple search indexes below (though only one is recommended!) by specifying
+# an `index` file to write it to and some `collections` for it to index
+# and running `$ bundle exec rake wax:search` .
+
+search:
+  main:
+    index: "/search/index.json"
+    collections:
+      posts:
+        content: true
+        fields:
+          - title
+          - year
+          - challenges
+          - technology
+          - user_group
+      tools:
+        content: true
+        fields:
+          - title
+          - description
+          - external_link
+          - technology
+          - experience
+          - challenges
+          - user_group
 
 menu:
   - label: "Home"
     link: "/"
+  - label: "News"
+    link: "/news/"
+  - label: "Research"
+    link: "/posts/"
+  - label: "Learn and Toolkit"
+    link: "/learn_and_toolkit/"
+  - label: "Search"
+    link: "/search/"
   - label: "About"
     link: "/about/"
 

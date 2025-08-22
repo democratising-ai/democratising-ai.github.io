@@ -1,0 +1,230 @@
+---
+layout: none
+---
+[
+  {
+    "title": "Template",
+    "year": 2024,
+    "user_group": [
+      "parents",
+      "students",
+      "educators"
+    ],
+    "content": " ## Introductound bias, privacy, access, and the potential de-skilling of educators. This article explores both the promise and pitfalls of AI in education, focusing on its impact on equity, pedagogy, and the broader mission of democratic education.ion Artificial Intelligence is reshaping the educational landscape. From adaptive learning platforms to automated grading systems, AI offers tools that promise to individualize instruction, improve learning outcomes, and reduce administrative burdens. However, the integration of AI in education also presents new challenges ar ## AI Applications in Education ### Personalized Learning AI-driven platforms such as DreamBox, Squirrel AI, and Khan Academy use machine learning to analyze student performance and tailor content in real-time. These systems adapt difficulty, pace, and type of content to match each learner’s needs—potentially supporting differentiated instruction at scale. ### Intelligent Tutoring Systems ITS like Carnegie Learning provide real-time feedback and guided problem-solving. While not replacements for human teachers, they can supplement instruction and offer extra support for struggling students. ### Administrative Automation AI tools now assist in automating grading (especially for multiple-choice and short-answer formats), scheduling, and plagiarism detection. This reduces teachers’ administrative load, freeing time for human-centric teaching. ## Risks and Challenges ### Digital Divide and Access Despite AI’s potential to increase access, it can also deepen the digital divide. Students in low-income or rural areas may lack the infrastructure, devices, or connectivity to benefit from AI tools—perpetuating educational inequality. ### Data Privacy and Surveillance Many AI educational tools collect extensive personal data. Without proper safeguards, student data may be sold, misused, or inadequately protected. Surveillance-based applications can undermine trust and student autonomy. ### Bias in AI Models If training data reflects biased assumptions (e.g., standardized test scores that correlate with socioeconomic status), AI systems may reinforce existing disparities. For example, automatic essay grading tools have been criticized for favoring verbose writing over content quality. ### Devaluation of Teachers There’s a risk of framing teachers as obsolete. While AI can enhance instruction, teaching involves emotional labor, creativity, and ethical judgment—qualities machines cannot replicate. Teachers must remain central to the learning process. ## Ensuring Ethical Implementation ### Inclusive Design AI tools should be co-designed with educators and students to ensure usability, relevance, and contextual appropriateness. Involving marginalized communities in development can reduce bias and promote inclusion. ### Regulation and Governance Clear policies are needed to govern AI use in education, including data protection standards, bias audits, and opt-in consent mechanisms. Government oversight and institutional ethics boards play key roles. ### Teacher Training Educators need support to understand and integrate AI tools effectively. Professional development programs must include not only technical training but also critical pedagogy around the ethical use of AI. ## Conclusion AI in education is not a silver bullet. When used thoughtfully and ethically, it can support student success and democratize access to quality learning. However, without vigilance, it risks reinforcing systemic inequities and disempowering educators. Ultimately, the goal should not be to automate education but to **enhance it in service of human flourishing**. ",
+    "permalink": "/posts/",
+    "lunr_id": 0
+  },
+  {
+    "title": "SLATE Guest Lecture: Dr. Simon Knight on Democratising AI",
+    "content": " As part of *An August of AI in Education* at the University of Bergen, SLATE is pleased to host Dr. Simon Knight, Associate Professor at the University of Technology Sydney (UTS) Transdisciplinary School. 📅 **Date:** August 21, 2025 🕙 **Time:** 10:00–11:00 📍 **Location:** Norway, Bergen, University of Bergen, Christies gate 12, 2nd floor, SLATE common room In his lecture “Democratising AI”, Dr. Knight will explore how diverse stakeholders—from educators to policymakers—can work together to navigate the opportunities and challenges posed by AI in education. The talk will highlight recent work on policy dilemmas, stakeholder engagement, and international collaboration. This event is part of the University’s preparations for the new national AI centre, AI LEARN, and aims to spark discussions on how AI can empower human learning. Dr. Simon Knight. Photo by Andy Roberts. 🔗 [Register for the seminar here](https://slate.uib.no/events/simon-knight) https://slate.uib.no/events/simon-knight *Please note: Registration closes on August 21 at 09:30.* ",
+    "permalink": "/posts/",
+    "lunr_id": 1
+  },
+  {
+    "title": "AI Literacy Day",
+    "external_link": "https://www.ailiteracyday.org/asynchronous-pd",
+    "user_group": [
+      "educators"
+    ],
+    "technology": [
+      "ai"
+    ],
+    "experience": [
+      "lecture",
+      "workshop",
+      "resources"
+    ],
+    "challenges": [
+      "ai-literacy"
+    ],
+    "thumbnail": "/assets/thumbnails/ai-literacy-day.png",
+    "description": "Activities and resources to improve your AI literacy",
+    "content": " Activities and resources to improve your AI literacy through professional development opportunities. ",
+    "permalink": "/tools/",
+    "lunr_id": 2
+  },
+  {
+    "title": "AI Literacy Framework",
+    "external_link": "https://ailiteracyframework.org/",
+    "user_group": [
+      "educators"
+    ],
+    "technology": [
+      "ai"
+    ],
+    "experience": [
+      "framework"
+    ],
+    "challenges": [
+      "ai-literacy"
+    ],
+    "thumbnail": "/assets/thumbnails/ai-literacy-framework.png",
+    "description": "A number of different AI literacy frameworks are in development... This page will help you to understand work in this area.",
+    "content": " A number of different AI literacy frameworks are in development... This page will help you to understand work in this area. ",
+    "permalink": "/tools/",
+    "lunr_id": 3
+  },
+  {
+    "title": "AI Literacy Frameworks for Children Skills-Changing",
+    "external_link": "https://unicri.org/topics/AI-Literacy-for-Children-skills-changing-world",
+    "user_group": [
+      "educators"
+    ],
+    "technology": [
+      "ai"
+    ],
+    "experience": [
+      "framework"
+    ],
+    "challenges": [
+      "ai-literacy"
+    ],
+    "thumbnail": "/assets/thumbnails/ai-literacy-children.png",
+    "description": "A number of different AI literacy frameworks are in development... This page will help you to understand work in this area.",
+    "content": " A number of different AI literacy frameworks are in development... This page will help you to understand work in this area. ",
+    "permalink": "/tools/",
+    "lunr_id": 4
+  },
+  {
+    "title": "Data Literacy Resources",
+    "external_link": "https://edutrust.slateresearch.ai/teaching-resources/",
+    "user_group": [
+      "educators"
+    ],
+    "technology": [
+      "data",
+      "ai"
+    ],
+    "experience": [
+      "interactive-game"
+    ],
+    "challenges": [
+      "data-literacy"
+    ],
+    "thumbnail": "/assets/thumbnails/data-literacy-resources.png",
+    "description": "A set of game based resources to help teachers teach basic data literacy",
+    "content": " A set of game based resources to help teachers teach basic data literacy through interactive games and activities. ",
+    "permalink": "/tools/",
+    "lunr_id": 5
+  },
+  {
+    "title": "EdTech Pilot Framework",
+    "external_link": "https://digitalpromise.org/edtech-pilot-framework/",
+    "user_group": [
+      "government-officials",
+      "school-leaders",
+      "educators"
+    ],
+    "technology": [
+      "edtech"
+    ],
+    "experience": [
+      "framework"
+    ],
+    "challenges": [
+      "procurement",
+      "policy"
+    ],
+    "thumbnail": "/assets/thumbnails/edtech-pilot-framework.png",
+    "description": "A step by step process to help you run successful EdTech pilots",
+    "content": " A step by step process to help you run successful EdTech pilots and make informed technology decisions. ",
+    "permalink": "/tools/",
+    "lunr_id": 6
+  },
+  {
+    "title": "GenAI Arcade",
+    "external_link": "https://genai-arcade.net/",
+    "user_group": [
+      "parents",
+      "students",
+      "educators"
+    ],
+    "technology": [
+      "genai"
+    ],
+    "experience": [
+      "interactive-game",
+      "experiment"
+    ],
+    "challenges": [
+      "ai-literacy"
+    ],
+    "thumbnail": "/assets/thumbnails/genai-arcade.png",
+    "description": "Playful learning about GenAI and how it works",
+    "content": " Playful learning about GenAI and how it works. An interactive game experience for understanding generative AI. ",
+    "permalink": "/tools/",
+    "lunr_id": 7
+  },
+  {
+    "title": "Privacy Not Included: Protect Your Privacy from AI Chatbots",
+    "external_link": "https://www.mozillafoundation.org/en/privacynotincluded/articles/how-to-protect-your-privacy-from-chatgpt-and-other-ai-chatbots/",
+    "user_group": [
+      "parents",
+      "students",
+      "educators",
+      "school-leaders",
+      "government-officials"
+    ],
+    "technology": [
+      "chatbots",
+      "genai"
+    ],
+    "experience": [
+      "article"
+    ],
+    "challenges": [
+      "privacy"
+    ],
+    "thumbnail": "/assets/thumbnails/privacy-ai-chatbots.png",
+    "description": "Tips for protecting your privacy when using different AI Chatbots",
+    "content": " Tips for protecting your privacy when using different AI Chatbots like ChatGPT and others. ",
+    "permalink": "/tools/",
+    "lunr_id": 8
+  },
+  {
+    "title": "Privacy Not Included: Tips for Back to School Shopping",
+    "external_link": "https://www.mozillafoundation.org/en/privacynotincluded/articles/tips-for-safer-back-to-school-shopping-your-kids-tech-privacy-cheat-sheet/",
+    "user_group": [
+      "parents"
+    ],
+    "technology": [
+      "edtech"
+    ],
+    "experience": [
+      "article"
+    ],
+    "challenges": [
+      "privacy"
+    ],
+    "thumbnail": "/assets/thumbnails/privacy-back-to-school.png",
+    "description": "Tips for choosing products that protect your child's privacy",
+    "content": " Tips for choosing products that protect your child's privacy during back-to-school shopping season. ",
+    "permalink": "/tools/",
+    "lunr_id": 9
+  },
+  {
+    "title": "UK Exam Algorithm Controversy Game",
+    "external_link": "https://www.edufuturesstudio.com/uk-exam-algorithm-game",
+    "user_group": [
+      "parents",
+      "students"
+    ],
+    "technology": [
+      "decision-trees",
+      "machine-learning"
+    ],
+    "experience": [
+      "interactive-game"
+    ],
+    "challenges": [
+      "ranking",
+      "ai-literacy",
+      "policy"
+    ],
+    "thumbnail": "/assets/thumbnails/uk-exam-algorithm.png",
+    "description": "An exploration of a complex topic - what would you have done?",
+    "content": " An exploration of a complex topic - what would you have done? Interactive game exploring the UK's 2020 exam algorithm controversy. ",
+    "permalink": "/tools/",
+    "lunr_id": 10
+  }
+]

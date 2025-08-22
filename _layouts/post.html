@@ -27,9 +27,9 @@ layout: default
             {% endfor %}
             {% endif %}
 
-            {% if page.issues %}
-            {% for issue in page.issues %}
-            <a href="{{ '/posts/' | relative_url }}?issue={{ issue | slugify }}" class="badge badge-warning">{{ issue
+            {% if page.challenges %}
+            {% for challenge in page.challenges %}
+            <a href="{{ '/posts/' | relative_url }}?challenge={{ challenge | slugify }}" class="badge badge-warning">{{ challenge
                 }}</a>
             {% endfor %}
             {% endif %}

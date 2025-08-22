@@ -1,0 +1,19 @@
+user_group:
+  label: "User Group"
+  multiple: true
+  property: user_group
+
+technology:
+  label: "Technology"
+  multiple: true
+  property: technology
+
+challenges:
+  label: "Challenges"
+  multiple: true
+  property: challenges
+
+experience:
+  label: "Experience"
+  multiple: true
+  property: experience

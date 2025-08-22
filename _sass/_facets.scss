@@ -37,29 +37,30 @@ h6 {
 
 // Links
 a {
-  color: $medium-background;
+  color: #163b52;
 }
 
 a:hover {
-  color: $light-text;
+  color: #0d1d27;
   text-decoration: none;
 }
 
 a.action-button {
-  background-color: $medium-background;
-  color: $light-link-hover;
+  background-color: #163b52;
+  color: $dark-link-hover;
   margin: 1rem;
 }
 
 a.action-button:hover {
-  background-color: $dark-background;
+  background-color: $light-background;
   color: $light-link;
 }
 
 // Banner
 .banner {
-  background-color: $dark-background;
-  color: $light-text;
+  background-color: $light-background;
+  color: #000000;
+  height: fit-content;
   padding: 10px 2rem;
   font-family: $heading-font;
   font-size: 1.2rem;
@@ -82,15 +83,24 @@ a.action-button:hover {
 }
 
 .banner a:hover {
-  color: $light-link-hover;
+  color: $dark-link-hover;
 }
 
 .banner .dropdown-item {
-  color: $dark-background;
+  color: $light-background;
 }
 
 .banner .dropdown-item:hover {
   color: $light-link;
+}
+
+.home-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
 
 // Item Pages (iiif + metadata)
@@ -106,27 +116,28 @@ a.action-button:hover {
   }
 }
 
-.item-metadata {
-  padding: 3rem;
-}
+// .item-metadata {
+//   padding: 3rem;
+// }
 
-.metadata-block {
-  font-family: $body-font;
-  max-width: 100%;
-  padding: 1rem;
-  font-size: 1.2rem;
+// .metadata-block {
+//   font-family: $body-font;
+//   max-width: 100%;
+//   padding: 1rem;
+//   font-size: 1.2rem;
 
-  dt {
-    color: $muted-text;
-    font-size: 1rem;
-    font-family: $heading-font;
-  }
-}
+//   dt {
+//     color: #000000;
+//     font-size: 1rem;
+//     font-family: $heading-font;
+//   }
+// }
 
-// IMPROVED SEARCH BOX STYLING
+// SEARCH BOX STYLING
 .search-block {
   position: relative;
-  margin-bottom: 1.5em;
+  padding: 15px !important;
+  margin: 20px 0 !important;
 
   #search {
     border-style: groove;
@@ -135,7 +146,7 @@ a.action-button:hover {
 
     &:focus {
       box-shadow: none;
-      border-color: $medium-background;
+      border-color: #000000;
     }
   }
 
@@ -532,6 +543,12 @@ legend {
   max-height: none; // Show all options, no scrolling
 }
 
+// External link indicator
+.card-body .fa-external-link-alt {
+  font-size: 0.8em;
+  margin-right: 2px;
+}
+
 // Bootstrap collapse improvements
 .collapse {
   transition: height 0.35s ease;
@@ -589,8 +606,19 @@ fieldset {
   }
 }
 
+.gallery-item-facets .card {
+  &.has-external-link {
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transform: translateY(-2px);
+    }
+  }
+}
+
 .gallery-item-facets .card-img-top {
-  width: 120px;
+  width: 140px;
   height: 120px;
   object-fit: cover;
   border-radius: 0;

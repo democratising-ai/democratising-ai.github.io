@@ -1,0 +1,250 @@
+<!-- Profile Selector -->
+<div id="profile-selector-widget" class="profile-selector-container mb-5">
+  <div class="text-center mb-4">
+    <h2>Select Your Profile</h2>
+    <p class="lead">Choose your role to see personalized content</p>
+  </div>
+
+  <div class="row profile-cards">
+    <div class="col-md-4 mb-3">
+      <div class="card profile-card h-100 clickable-card" data-usergroup="educators">
+        <div class="card-body text-center">
+          <div class="profile-icon mb-3">
+            <i class="fas fa-chalkboard-teacher fa-3x text-info"></i>
+          </div>
+          <h3 class="card-title">Educators</h3>
+          <p class="card-text">AI tools, teaching strategies, and classroom integration guides</p>
+          <div class="selection-indicator">
+            <span class="select-text">Click to Select</span>
+            <span class="selected-text" style="display:none;">Selected</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <div class="card profile-card h-100 clickable-card" data-usergroup="parents">
+        <div class="card-body text-center">
+          <div class="profile-icon mb-3">
+            <i class="fas fa-users fa-3x text-info"></i>
+          </div>
+          <h3 class="card-title">Parents</h3>
+          <p class="card-text">Resources about AI's impact on children's education and privacy</p>
+          <div class="selection-indicator">
+            <span class="select-text">Click to Select</span>
+            <span class="selected-text" style="display:none;">Selected</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <div class="card profile-card h-100 clickable-card" data-usergroup="students">
+        <div class="card-body text-center">
+          <div class="profile-icon mb-3">
+            <i class="fas fa-graduation-cap fa-3x text-info"></i>
+          </div>
+          <h3 class="card-title">Students</h3>
+          <p class="card-text">Learn about AI literacy and digital tools for learning</p>
+          <div class="selection-indicator">
+            <span class="select-text">Click to Select</span>
+            <span class="selected-text" style="display:none;">Selected</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-3">
+    <div>
+      <a href="/learn_and_toolkit/" class="btn btn-outline-primary gap-4">Browse Tools</a>
+      <button id="clear-profile" class="btn btn btn-outline-primary" style="display:none;">
+        Clear Profile Selection
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    // Check current user group from URL
+    var currentUserGroup = UserProfile.getCurrentUserGroup();
+
+    if (currentUserGroup) {
+      activateUserGroup(currentUserGroup);
+      showUserGroupContent(currentUserGroup);
+    }
+
+    // Handle card click - navigate immediately with parameter
+    $('.clickable-card').click(function() {
+      var userGroup = $(this).attr('data-usergroup');
+
+      // Update URL without refresh
+      var url = new URL(window.location);
+      url.searchParams.set('usergroup', userGroup);
+      history.pushState({}, '', url.toString());
+
+      // Reset ALL cards first
+      $('.profile-card').removeClass('selected');
+      $('.profile-card').find('.select-text').show();
+      $('.profile-card').find('.selected-text').hide();
+
+      // Then update the clicked card
+      $(this).addClass('selected');
+      $(this).find('.select-text').hide();
+      $(this).find('.selected-text').show();
+      $('#clear-profile').show();
+
+      // Update content display
+      if (typeof updateContentDisplay === 'function') {
+        updateContentDisplay(userGroup);
+      }
+
+      // Update ALL links - INCLUDING those that already have usergroup
+      $('a[href^="/"], a[href^="' + window.location.origin + '"]').each(function() {
+        var href = $(this).attr('href');
+
+        if (href && !href.startsWith('#')) {
+          try {
+            var linkUrl = new URL(href, window.location.origin);
+
+            if (linkUrl.origin === window.location.origin) {
+              // ALWAYS set/update the usergroup parameter
+              linkUrl.searchParams.set('usergroup', userGroup);
+              $(this).attr('href', linkUrl.toString());
+            }
+          } catch (e) {
+            // Invalid URL, skip
+          }
+        }
+      });
+    });
+
+    // Clear user group selection - navigate immediately without parameter
+    $('#clear-profile').click(function() {
+      // Update URL without refresh
+      var url = new URL(window.location);
+      url.searchParams.delete('usergroup');
+      history.pushState({}, '', url.toString());
+
+      // Reset UI
+      $('.profile-card').removeClass('selected');
+      $('.profile-card').find('.select-text').show();
+      $('.profile-card').find('.selected-text').hide();
+      $(this).hide();
+
+      // Clear content display
+      if (typeof updateContentDisplay === 'function') {
+        updateContentDisplay('all');
+      }
+
+      // Remove usergroup from all links
+      $('a[href^="/"], a[href^="' + window.location.origin + '"]').each(function() {
+        var href = $(this).attr('href');
+
+        if (href && !href.startsWith('#')) {
+          try {
+            var linkUrl = new URL(href, window.location.origin);
+
+            if (linkUrl.origin === window.location.origin) {
+              linkUrl.searchParams.delete('usergroup');
+              $(this).attr('href', linkUrl.toString());
+            }
+          } catch (e) {
+            // Invalid URL, skip
+          }
+        }
+      });
+    });
+
+    function activateUserGroup(userGroup) {
+      var card = $('.profile-card[data-usergroup="' + userGroup + '"]');
+      card.addClass('selected');
+      card.find('.select-text').hide();
+      card.find('.selected-text').show();
+      $('#clear-profile').show();
+    }
+
+    function showUserGroupContent(userGroup) {
+      if (typeof updateContentDisplay === 'function') {
+        updateContentDisplay(userGroup);
+      }
+    }
+  });
+</script>
+
+<style>
+.profile-card {
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  cursor: pointer;
+  user-select: none; /* Prevent text selection when clicking */
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background-color: #f8f9fa;
+}
+
+.profile-card.selected {
+  border: 2px solid #3f7fc4;
+  background-color: #f0f8ff;
+  transform: translateY(-2px);
+}
+
+.profile-card.selected:hover {
+  background-color: #f0f8ff;
+  transform: translateY(-5px);
+}
+
+.clickable-card {
+  cursor: pointer;
+}
+
+.selection-indicator {
+  font-weight: bold;
+  margin-top: 15px;
+  color: #17a2b8;
+  transition: color 0.2s;
+}
+
+.profile-card.selected .selection-indicator {
+  color: #28a745;
+}
+
+.profile-icon {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.profile-card:hover .profile-icon {
+  background-color: #e9ecef;
+}
+
+.profile-card.selected .profile-icon {
+  background-color: #e3f2fd;
+}
+
+.card-title {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.card-text {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.profile-selector-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Add some visual feedback for active state */
+.profile-card:active {
+  transform: translateY(0px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+</style>

@@ -1,0 +1,22 @@
+search:
+  main:
+    index: "/search/index.json"
+    collections:
+      posts:
+        content: true
+        fields:
+          - title
+          - year
+          - challenges
+          - technology
+          - user_group
+      tools:
+        content: true
+        fields:
+          - title
+          - description
+          - external_link
+          - technology
+          - experience
+          - challenges
+          - user_group
