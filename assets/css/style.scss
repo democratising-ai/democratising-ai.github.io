@@ -35,20 +35,12 @@ sitemap: false
 $body-font: "Open Sans Regular", "Verdana", "sans-serif";
 $heading-font: "Open Sans Light", "Verdana", "sans-serif";
 
-/* Colors: Light Theme – Black, Grey, White */
+// Theme Colours
 
-$light-background: #ffffff;         // Main white background
-$medium-background: #f2f2f2;        // Light grey for sections/cards
-$dark-background: #a7a7a7;          // Slightly darker grey for contrast areas
-
-$dark-text: #111111;                // Nearly black text for high readability
-$muted-text: #555555;               // Medium grey text for less emphasis
-$light-text: #525252;               // Light grey, used sparingly
-
-$light-link: #0d1d27;               // Strong blue link for visibility on white
-$light-link-hover: #163b52;         // Darker blue on hover
-
-$code: #242121;                     // Light grey for code blocks background
+$light-background: #bec1b3;
+$dark-text: #000000;
+$light-link: #0d1d27;
+$dark-link-hover: #163b52;
 
 /* Image Heights */
 
@@ -61,3 +53,13 @@ $max-width: 100%;
 
 @import "bootstrap";
 @import "facets";
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.full-width-gallery-layout {
+  margin-left: -51vw;
+  margin-right: -51vw;
+}

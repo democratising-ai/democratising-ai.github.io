@@ -15,6 +15,11 @@
 {% assign collection = site[include.collection] %}
 {% endif %}
 
+{% comment %}- EXCLUDE SPECIFIC TYPE -{% endcomment %}
+{% if include.exclude_type %}
+  {% assign collection = collection | reject: "type", include.exclude_type %}
+{% endif %}
+
 <div class="full-width-gallery-layout">
   {% comment %} :::: LEFT SIDEBAR FACETS :::: {% endcomment %}
   {% if include.facet_by %}
@@ -126,18 +131,24 @@
               endfor %} {% elsif item_values %} {{ item_values | slugify }} {% endif %} {% endfor %} {% endif %}"
               data-user-group="{% if item.user_group %}{% for group in item.user_group %}{{ group | slugify }} {% endfor %}{% endif %}"
               data-technology="{% if item.technology %}{% for tech in item.technology %}{{ tech | slugify }} {% endfor %}{% endif %}"
-              data-issues="{% if item.issues %}{% for issue in item.issues %}{{ issue | slugify }} {% endfor %}{% endif %}">
+              data-challenges="{% if item.challenges %}{% for challenge in item.challenges %}{{ challenge | slugify }} {% endfor %}{% endif %}">
 
-              <div class="card thumbnail-card">
+              <div class="card thumbnail-card{% if item.external_link %} has-external-link{% endif %}">
                 {% if item.thumbnail %}
                 <img class="card-img-top gallery-thumb" src="{{ item.thumbnail | relative_url }}"
                   alt="{{ item.label | default: item.title }}" />
                 {% endif %}
 
                 <div class="card-body">
-                  <a href="{{ item.url | relative_url }}">
-                    <h3 class="card-title">{{ item.label | default: item.title }}</h3>
-                  </a>
+                  {% if item.external_link %}
+                    <a href="{{ item.external_link }}" target="_blank" rel="noopener noreferrer">
+                      <h3 class="card-title">{{ item.label | default: item.title }}</h3>
+                    </a>
+                  {% else %}
+                    <a href="{{ item.url | relative_url }}">
+                      <h3 class="card-title">{{ item.label | default: item.title }}</h3>
+                    </a>
+                  {% endif %}
 
                   {% if include.collection == 'posts' %}
                   <p class="card-text">
@@ -166,22 +177,55 @@
                     <br>
                     {% endif %}
 
-                    {% if item.issues %}
-                    <strong>Issues:</strong>
-                    {% if item.issues.first %}
-                    {{ item.issues | join: ", " }}
+                    {% if item.challenges %}
+                    <strong>challenges:</strong>
+                    {% if item.challenges.first %}
+                    {{ item.challenges | join: ", " }}
                     {% else %}
-                    {{ item.issues }}
+                    {{ item.challenges }}
                     {% endif %}
                     {% endif %}
                   </p>
-                  {% else %}
+                {% elsif include.collection == 'tools' %}
+                  <p class="card-text">
+                    {% if item.description %}
+                    {{ item.description }}
+                    {% endif %}
+                    <br><br>
+
+                    {% if item.user_group %}
+                    <strong>For:</strong>
+                    {% if item.user_group.first %}
+                    {{ item.user_group | join: ", " }}
+                    {% else %}
+                    {{ item.user_group }}
+                    {% endif %}
+                    <br>
+                    {% endif %}
+
+                    {% if item.experience %}
+                    <strong>Type:</strong>
+                    {% if item.experience.first %}
+                    {{ item.experience | join: ", " }}
+                    {% else %}
+                    {{ item.experience }}
+                    {% endif %}
+                    {% endif %}
+
+                    {% if item.external_link %}
+                    <br>
+                    <small class="text-muted">
+                      <i class="fas fa-external-link-alt"></i> External Resource
+                    </small>
+                    {% endif %}
+                  </p>
+                {% else %}
                   <p class="card-text">
                     {% if item.object_type and item.location and item._date %}
                     A {{ item.object_type }} from {{ item.location }} ({{ item._date }}).
                     {% endif %}
                   </p>
-                  {% endif %}
+                {% endif %}
                 </div>
               </div>
             </div>

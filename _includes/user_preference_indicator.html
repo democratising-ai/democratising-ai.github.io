@@ -15,7 +15,7 @@
 <script>
     $(document).ready(function () {
         function showUserPreference() {
-            var userGroup = sessionStorage.getItem('preferred_user_group');
+            var userGroup = sessionStorage.getItem('preferred_user-group');
             if (userGroup && !window.location.search.includes('usergroup=')) {
                 var groupName = userGroup.charAt(0).toUpperCase() + userGroup.slice(1);
                 $('#preference-group').text(groupName);
@@ -30,7 +30,7 @@
         });
 
         $('#clear-preference').click(function () {
-            sessionStorage.removeItem('preferred_user_group');
+            sessionStorage.removeItem('preferred_user-group');
             $('#user-preference-indicator').hide();
         });
 

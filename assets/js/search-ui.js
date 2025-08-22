@@ -20,7 +20,7 @@ function getThumbnail(item, url) {
 
 function displayResult(item, fields, url) {
   // Create the individual post URL from the title
-  var link = '{{ site.baseurl }}/posts/' + (item.title || 'untitled').toLowerCase()
+  var link = '/posts/' + (item.title || 'untitled').toLowerCase()
     .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
     .replace(/\s+/g, '-') // Replace spaces with hyphens
     .replace(/-+/g, '-') // Replace multiple hyphens with single

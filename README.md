@@ -12,7 +12,7 @@ This site explores the intersection of AI and education, providing resources and
 
 ## Features
 
-- **Faceted Browsing**: Filter articles by user groups, technologies, and issues
+- **Faceted Browsing**: Filter articles by user groups, technologies, and challenges
 - **Search Functionality**: Full-text search across all content
 - **Interactive Galleries**: Browse content with advanced filtering options
 
@@ -35,7 +35,7 @@ The site organizes content around three main facets:
 
 #### Technologies
 
-#### Issues
+#### challenges
 
 ## Adding Content
 
@@ -55,9 +55,9 @@ title: "Your Post Title"
 author: "Author Name"
 year: 2025
 layout: post
-issues:
-  - issue1
-  - issue2
+challenges:
+  - challange1
+  - challange2
 technology:
   - technology1
   - technology2
@@ -93,11 +93,11 @@ This project is open source. See LICENSE.txt for details.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit issues or pull requests.
+Contributions are welcome! Please feel free to submit challenges or pull requests.
 
 ## Contact
 
-For questions or collaboration opportunities, please reach out through the About page or GitHub issues.
+For questions or collaboration opportunities, please reach out through the About page or GitHub challenges.
 
 ---
 

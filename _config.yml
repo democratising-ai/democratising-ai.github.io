@@ -5,8 +5,8 @@ author:
   name:
   email:
 description: "About AI, technology, and society."
-baseurl: "/democratising-ai"
-url: ""
+baseurl: ""
+url: "https://democratising-ai.github.io"
 
 wax:
   facets:
@@ -20,6 +20,9 @@ collections:
   posts:
     output: true
     permalink: /posts/:title/
+  tools:
+    output: true
+    permalink: /tools/:name/
 
 # SEARCH INDEX SETTINGS
 # You can create multiple search indexes below (though only one is recommended!) by specifying
@@ -35,31 +38,29 @@ search:
         fields:
           - title
           - year
-          - issues
+          - challenges
           - technology
+          - user_group
+      tools:
+        content: true
+        fields:
+          - title
+          - description
+          - external_link
+          - technology
+          - experience
+          - challenges
           - user_group
 
 menu:
   - label: "Home"
     link: "/"
   - label: "News"
-    link: "/posts/"
+    link: "/news/"
   - label: "Research"
-    sub:
-      - label: "Research Team"
-        link: "/research_team/"
-      - label: "Papers"
-        link: "/papers/"
-      - label: "Project 1"
-        link: "/project1/"
-      - label: "Project 2"
-        link: "/project2/"
+    link: "/posts/"
   - label: "Learn and Toolkit"
-    sub:
-      - label: "All Resources"
-        link: "/all_resources/"
-      - label: "Widgets"
-        link: "/widgets/"
+    link: "/learn_and_toolkit/"
   - label: "Search"
     link: "/search/"
   - label: "About"

@@ -7,6 +7,16 @@ search:
         fields:
           - title
           - year
-          - issues
+          - challenges
           - technology
+          - user_group
+      tools:
+        content: true
+        fields:
+          - title
+          - description
+          - external_link
+          - technology
+          - experience
+          - challenges
           - user_group

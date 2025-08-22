@@ -3,151 +3,228 @@ layout: none
 ---
 [
   {
-    "title": "Transforming Education Through AI: Opportunities and Risks",
+    "title": "Template",
     "year": 2024,
-    "issues": [
-      "accessibility",
-      "equity"
-    ],
-    "technology": [
-      "machine learning",
-      "adaptive learning"
-    ],
     "user_group": [
-      "parents"
+      "parents",
+      "students",
+      "educators"
     ],
     "content": " ## Introductound bias, privacy, access, and the potential de-skilling of educators. This article explores both the promise and pitfalls of AI in education, focusing on its impact on equity, pedagogy, and the broader mission of democratic education.ion Artificial Intelligence is reshaping the educational landscape. From adaptive learning platforms to automated grading systems, AI offers tools that promise to individualize instruction, improve learning outcomes, and reduce administrative burdens. However, the integration of AI in education also presents new challenges ar ## AI Applications in Education ### Personalized Learning AI-driven platforms such as DreamBox, Squirrel AI, and Khan Academy use machine learning to analyze student performance and tailor content in real-time. These systems adapt difficulty, pace, and type of content to match each learner’s needs—potentially supporting differentiated instruction at scale. ### Intelligent Tutoring Systems ITS like Carnegie Learning provide real-time feedback and guided problem-solving. While not replacements for human teachers, they can supplement instruction and offer extra support for struggling students. ### Administrative Automation AI tools now assist in automating grading (especially for multiple-choice and short-answer formats), scheduling, and plagiarism detection. This reduces teachers’ administrative load, freeing time for human-centric teaching. ## Risks and Challenges ### Digital Divide and Access Despite AI’s potential to increase access, it can also deepen the digital divide. Students in low-income or rural areas may lack the infrastructure, devices, or connectivity to benefit from AI tools—perpetuating educational inequality. ### Data Privacy and Surveillance Many AI educational tools collect extensive personal data. Without proper safeguards, student data may be sold, misused, or inadequately protected. Surveillance-based applications can undermine trust and student autonomy. ### Bias in AI Models If training data reflects biased assumptions (e.g., standardized test scores that correlate with socioeconomic status), AI systems may reinforce existing disparities. For example, automatic essay grading tools have been criticized for favoring verbose writing over content quality. ### Devaluation of Teachers There’s a risk of framing teachers as obsolete. While AI can enhance instruction, teaching involves emotional labor, creativity, and ethical judgment—qualities machines cannot replicate. Teachers must remain central to the learning process. ## Ensuring Ethical Implementation ### Inclusive Design AI tools should be co-designed with educators and students to ensure usability, relevance, and contextual appropriateness. Involving marginalized communities in development can reduce bias and promote inclusion. ### Regulation and Governance Clear policies are needed to govern AI use in education, including data protection standards, bias audits, and opt-in consent mechanisms. Government oversight and institutional ethics boards play key roles. ### Teacher Training Educators need support to understand and integrate AI tools effectively. Professional development programs must include not only technical training but also critical pedagogy around the ethical use of AI. ## Conclusion AI in education is not a silver bullet. When used thoughtfully and ethically, it can support student success and democratize access to quality learning. However, without vigilance, it risks reinforcing systemic inequities and disempowering educators. Ultimately, the goal should not be to automate education but to **enhance it in service of human flourishing**. ",
     "permalink": "/posts/",
     "lunr_id": 0
   },
   {
-    "title": "Unmasking Algorithmic Bias in AI Systems",
-    "year": 2023,
-    "issues": [
-      "accessibility",
-      "equity"
-    ],
-    "technology": [
-      "natural language processing",
-      "predictive analytics"
-    ],
-    "user_group": [
-      "educators",
-      "students"
-    ],
-    "content": " ## Introduction Artificial Intelligence (AI) is rapidly transforming industries from finance to healthcare, education to law enforcement. However, as its influence expands, so too does awareness of its limitations—particularly around fairness. One of the most urgent challenges facing AI today is **algorithmic bias**: the tendency of AI systems to reflect and amplify existing social inequities. This article explores the origins of algorithmic bias, its real-world consequences, and strategies for mitigation. While AI promises to bring efficiency and objectivity, unchecked bias threatens to deepen structural injustices and erode public trust in these technologies. ## What Is Algorithmic Bias? Algorithmic bias occurs when an AI system produces systematically unfair outcomes due to prejudiced data, flawed model assumptions, or opaque decision-making processes. Unlike human bias, which is often overt or intuitive, algorithmic bias can be **harder to detect**—hidden behind layers of computation and massive datasets. There are several types of bias in AI: - **Historical bias**: Prejudice embedded in past data (e.g., hiring records that favor men). - **Sampling bias**: Training datasets that do not represent the target population. - **Measurement bias**: Proxies or labels that misrepresent reality (e.g., arrest rates as a proxy for criminal behavior). - **Aggregation bias**: Using one-size-fits-all models that overlook group differences. The result? AI systems that perpetuate discrimination under the guise of objectivity. ## Real-World Examples ### 1. **Facial Recognition and Racial Disparities** Studies have shown that facial recognition technologies often have higher error rates for people of color. In 2018, the Gender Shades project revealed that commercial facial analysis systems misclassified darker-skinned women up to 35% of the time, compared to less than 1% for lighter-skinned men. This disparity stems from training datasets dominated by lighter-skinned faces. These systems have been deployed in surveillance, law enforcement, and airport security—raising serious ethical concerns. Several high-profile cases of false arrests due to misidentification have prompted calls for bans or strict regulation. ### 2. **Predictive Policing** Predictive policing tools like PredPol use historical crime data to forecast where crimes are likely to occur. However, this data often reflects biased policing practices—leading to a feedback loop where over-policed communities continue to be targeted. Rather than preventing crime, these systems reinforce systemic racism, particularly against Black and Latinx neighborhoods in the United States. Critics argue that such tools criminalize poverty and fail to address root causes of crime. ### 3. **Automated Hiring Tools** Many companies use AI to streamline recruitment—scanning resumes, ranking candidates, and even analyzing facial expressions in video interviews. However, these systems can learn to favor candidates based on proxies like names, educational background, or accent—often disadvantaging women, people of color, or those from non-traditional paths. For example, Amazon scrapped an AI hiring tool after discovering it downgraded resumes that included the word 'women's' (as in 'women's chess club captain') and favored applicants with male-dominated job histories. ## Why Bias Persists Several structural factors contribute to the persistence of algorithmic bias: - **Lack of diversity in tech**: Homogeneous development teams may overlook or underestimate the impact of bias. - **Opaque models**: Many AI systems, especially deep learning models, operate as 'black boxes' with little transparency. - **Commercial pressure**: Companies prioritize speed and profit over fairness, launching products without adequate testing. - **Weak regulation**: Legal and ethical frameworks are often slow to keep pace with technological innovation. Bias is not merely a technical flaw—it reflects broader societal inequalities encoded into technology. ## Strategies for Mitigation ### 1. **Data Auditing and Curation** Before model training begins, datasets must be carefully audited for representativeness, balance, and labeling quality. Including diverse demographics and reducing skew in training data can mitigate downstream bias. Some initiatives promote **community-sourced datasets**, especially from underrepresented regions, to avoid over-reliance on Western-centric data. ### 2. **Fairness-Aware Algorithms** Researchers are developing algorithms that include fairness constraints—ensuring equal treatment across groups. Techniques like reweighing, adversarial debiasing, and disparate impact analysis can help reduce unfair outcomes. However, 'fairness' itself is a contested concept, and different definitions (e.g., equal opportunity vs. demographic parity) may lead to trade-offs. ### 3. **Explainability and Transparency** Opening the 'black box' of AI is essential for accountability. Tools like LIME, SHAP, and counterfactual explanations help users understand how decisions are made. Transparency also includes clear documentation—such as datasheets for datasets and model cards for AI systems—so users and regulators can assess risk. ### 4. **Inclusive Design and Development** Involving diverse stakeholders in the design process—especially those impacted by AI systems—can uncover blind spots. Participatory design methods, community review boards, and public consultation are crucial for responsible innovation. Representation should go beyond consultation to include leadership roles in development and governance. ### 5. **Regulatory and Ethical Frameworks** Governments and international bodies are beginning to establish guidelines for ethical AI. The EU's AI Act, UNESCO’s AI Ethics Recommendations, and national AI strategies increasingly emphasize fairness, human rights, and transparency. Independent audits, impact assessments, and certification schemes can help enforce accountability, especially in high-risk domains. ## Conclusion Bias in AI is not inevitable—but addressing it requires a shift in priorities, culture, and power. Technology must not only work—it must work **fairly**. This means rethinking how data is collected, how models are built, and who gets to decide what “fairness” means. Democratising AI involves more than open access to tools; it requires inclusive governance, critical education, and structural reform. Only then can AI truly serve the public good. ## Further Reading - **'Weapons of Math Destruction'** by Cathy O’Neil - **'Race After Technology'** by Ruha Benjamin - **AI Now Institute Reports** – [https://ainowinstitute.org](https://ainowinstitute.org) --- ",
+    "title": "SLATE Guest Lecture: Dr. Simon Knight on Democratising AI",
+    "content": " As part of *An August of AI in Education* at the University of Bergen, SLATE is pleased to host Dr. Simon Knight, Associate Professor at the University of Technology Sydney (UTS) Transdisciplinary School. 📅 **Date:** August 21, 2025 🕙 **Time:** 10:00–11:00 📍 **Location:** Norway, Bergen, University of Bergen, Christies gate 12, 2nd floor, SLATE common room In his lecture “Democratising AI”, Dr. Knight will explore how diverse stakeholders—from educators to policymakers—can work together to navigate the opportunities and challenges posed by AI in education. The talk will highlight recent work on policy dilemmas, stakeholder engagement, and international collaboration. This event is part of the University’s preparations for the new national AI centre, AI LEARN, and aims to spark discussions on how AI can empower human learning. Dr. Simon Knight. Photo by Andy Roberts. 🔗 [Register for the seminar here](https://slate.uib.no/events/simon-knight) https://slate.uib.no/events/simon-knight *Please note: Registration closes on August 21 at 09:30.* ",
     "permalink": "/posts/",
     "lunr_id": 1
   },
   {
-    "title": "AI and Surveillance: Navigating the Risks of a Watchful Society",
-    "year": 2024,
-    "issues": [
-      "accessibility",
-      "equity"
+    "title": "AI Literacy Day",
+    "external_link": "https://www.ailiteracyday.org/asynchronous-pd",
+    "user_group": [
+      "educators"
     ],
     "technology": [
-      "machine learning",
-      "adaptive learning"
+      "ai"
     ],
-    "user_group": [
-      "students",
-      "parents"
+    "experience": [
+      "lecture",
+      "workshop",
+      "resources"
     ],
-    "content": " ## Introduction Artificial Intelligence has enabled surveillance on an unprecedented scale. From facial recognition in public spaces to predictive monitoring in workplaces, governments and corporations increasingly deploy AI to track, predict, and influence behavior. While proponents argue that AI surveillance enhances security and efficiency, critics warn of chilling effects on free speech, erosion of privacy, and potential authoritarian misuse. This article examines the scope, risks, and governance of AI-powered surveillance. ## Forms of AI Surveillance ### Facial Recognition Used by law enforcement, airports, and retail companies, facial recognition systems can identify individuals in real time. They often rely on massive, unconsented image datasets—raising concerns about legality and bias. ### Predictive Policing These systems use historical crime data to forecast potential future crimes. However, as discussed in other articles, such models often reflect and perpetuate biased policing practices. ### Emotion Recognition Some companies claim AI can detect emotion from facial expressions or voice. These claims are scientifically contested and may lead to false assumptions in hiring or policing contexts. ### Social Scoring Systems China's Social Credit System is the most well-known example of AI used for behavioral scoring, where citizens’ actions affect access to services. Similar systems are being explored in other contexts. ## Ethical and Social Implications ### Loss of Anonymity Ubiquitous surveillance erodes the ability to remain anonymous in public, affecting protest, dissent, and other forms of democratic expression. ### Disproportionate Targeting Marginalized communities—especially people of color—are more likely to be misidentified or over-surveilled by AI systems, leading to discriminatory consequences. ### Consent and Accountability AI surveillance often operates without meaningful consent. The opacity of systems makes it difficult to assign accountability when rights are violated. ## International Responses ### Bans and Moratoria Several cities, including San Francisco and Amsterdam, have enacted bans or moratoria on facial recognition in public spaces. ### AI Ethics Frameworks Organizations like the UN, OECD, and European Union have issued guidelines on ethical AI use, emphasizing the need for proportionality, transparency, and human rights safeguards. ### Legal Action In some cases, individuals and civil liberties organizations have taken legal action to challenge unlawful surveillance. Clear legislation is emerging, but gaps remain. ## Pathways Forward - **Transparency requirements**: Institutions must disclose when and how AI surveillance is used. - **Independent oversight**: Watchdog bodies can help monitor compliance and investigate abuses. - **Public debate**: Society must engage in robust dialogue about the balance between security and freedom. ## Conclusion AI-enabled surveillance presents both technical and moral challenges. If left unchecked, it could lead to a society where people self-censor and live in fear. But with careful governance, we can uphold civil liberties while managing risk. Democratising AI means ensuring it serves **all** people, not just those in power. ",
-    "permalink": "/posts/",
+    "challenges": [
+      "ai-literacy"
+    ],
+    "thumbnail": "/assets/thumbnails/ai-literacy-day.png",
+    "description": "Activities and resources to improve your AI literacy",
+    "content": " Activities and resources to improve your AI literacy through professional development opportunities. ",
+    "permalink": "/tools/",
     "lunr_id": 2
   },
   {
-    "title": "Open Source AI: Breaking the Monopoly",
-    "year": 2024,
-    "issues": [
-      "accessibility",
-      "equity"
-    ],
-    "technology": [
-      "machine learning",
-      "adaptive learning",
-      "natural language processing",
-      "predictive analytics"
-    ],
+    "title": "AI Literacy Framework",
+    "external_link": "https://ailiteracyframework.org/",
     "user_group": [
       "educators"
     ],
-    "content": " ## Introduction The recent boom in AI has been led by a handful of tech giants, who dominate access to state-of-the-art models and infrastructure. But a growing open-source movement is challenging this monopoly—making powerful AI tools accessible to researchers, startups, and the public. This article explores the role of open-source AI in democratizing innovation, the risks of openness, and the future of collaborative development. ## The Power of Open Source Open-source software has long driven technological progress—from Linux to Python. Now, open-source AI projects like Hugging Face Transformers, OpenAssistant, and LLaMA are enabling a new wave of accessible and customizable AI tools. Benefits include: - **Transparency**: Public code and datasets allow for scrutiny and improvement. - **Accessibility**: Lowers barriers for researchers and non-profits. - **Customization**: Enables localized or domain-specific solutions. - **Innovation**: Encourages rapid iteration and community contribution. ## Challenges and Risks ### 1. **Security and Misuse** Open models can be used for harmful purposes—deepfakes, misinformation, or surveillance. Without guardrails, openness can empower bad actors. ### 2. **Sustainability** Many open-source projects rely on volunteers or underfunded institutions. Sustaining infrastructure and development over time remains a challenge. ### 3. **Governance and Licensing** Tensions arise over licensing models: should open models be freely used in commercial settings? Projects like Stable Diffusion have sparked debates over 'open-washing' vs. genuine openness. ## Promising Models - **EleutherAI**: A decentralized research collective creating open GPT-style models. - **BigScience**: A year-long collaboration led by Hugging Face, building multilingual models with ethical oversight. - **OpenRAIL licenses**: New licenses that combine openness with ethical usage constraints. ## The Role of Policy Governments can support open AI through funding, infrastructure, and procurement. The EU’s AI Act may offer carve-outs for open-source tools. Education initiatives and public compute infrastructure can also ensure that open AI reaches marginalized communities. ## Conclusion Open-source AI challenges centralized control and opens the door to collaborative, ethical innovation. But openness alone isn’t enough—it must be paired with community governance, ethical safeguards, and sustainable support. As AI becomes critical to public life, keeping it open and inclusive is not just a technical choice—it’s a political one. --- ",
-    "permalink": "/posts/",
+    "technology": [
+      "ai"
+    ],
+    "experience": [
+      "framework"
+    ],
+    "challenges": [
+      "ai-literacy"
+    ],
+    "thumbnail": "/assets/thumbnails/ai-literacy-framework.png",
+    "description": "A number of different AI literacy frameworks are in development... This page will help you to understand work in this area.",
+    "content": " A number of different AI literacy frameworks are in development... This page will help you to understand work in this area. ",
+    "permalink": "/tools/",
     "lunr_id": 3
   },
   {
-    "title": "AI and the Future of Student Assessment",
-    "year": 2023,
-    "issues": [
-      "bias",
-      "transparency"
-    ],
-    "technology": [
-      "natural language processing",
-      "predictive analytics"
-    ],
+    "title": "AI Literacy Frameworks for Children Skills-Changing",
+    "external_link": "https://unicri.org/topics/AI-Literacy-for-Children-skills-changing-world",
     "user_group": [
       "educators"
     ],
-    "content": " The use of AI in student assessment is rapidly gaining traction. From automated essay grading to real-time analytics on student engagement, these systems promise faster, more consistent feedback. But as AI becomes more embedded in education, it raises critical questions about **bias**, **transparency**, and the evolving role of educators. Traditional assessments like multiple-choice exams can only capture a narrow slice of student understanding. AI-powered tools—especially those using **Natural Language Processing (NLP)**—can evaluate written responses, code, and even spoken language, providing richer insights into student learning. Yet this power comes with risk. Bias in AI models may reflect historical inequalities, leading to unfair evaluations for students from diverse backgrounds. For example, NLP models trained on predominantly Western English corpora may misinterpret writing styles from multilingual students. **Predictive analytics** systems, which aim to forecast student outcomes, can be especially problematic. If a system flags a student as “likely to fail,” it may influence how teachers treat them, leading to self-fulfilling prophecies. Transparency in these models—what features they use, how decisions are made—is essential to prevent algorithmic injustice. There’s also a risk of over-reliance. While AI can grade faster, it doesn’t understand the context behind a student’s thinking or creativity. Educators must retain the final say and interpret AI outputs with professional judgment. Moving forward, AI-based assessments should be co-designed with teachers, validated across diverse student populations, and continuously monitored. The goal isn’t to automate evaluation—but to **enhance** it, making feedback more timely, fair, and responsive. ",
-    "permalink": "/posts/",
+    "technology": [
+      "ai"
+    ],
+    "experience": [
+      "framework"
+    ],
+    "challenges": [
+      "ai-literacy"
+    ],
+    "thumbnail": "/assets/thumbnails/ai-literacy-children.png",
+    "description": "A number of different AI literacy frameworks are in development... This page will help you to understand work in this area.",
+    "content": " A number of different AI literacy frameworks are in development... This page will help you to understand work in this area. ",
+    "permalink": "/tools/",
     "lunr_id": 4
   },
   {
-    "title": "Democratising AI in Education",
-    "year": 2025,
-    "issues": [
-      "accessibility",
-      "equity"
-    ],
-    "technology": [
-      "machine learning",
-      "adaptive learning"
-    ],
+    "title": "Data Literacy Resources",
+    "external_link": "https://edutrust.slateresearch.ai/teaching-resources/",
     "user_group": [
       "educators"
     ],
-    "content": " Artificial Intelligence (AI) has become an increasingly powerful force in shaping the future of education. From personalized learning to intelligent tutoring systems, AI promises to transform the classroom experience for students and teachers alike. But for these benefits to be realized equitably, we must consider how to democratise access to these tools. One of the most important opportunities AI brings is **adaptive learning**—technology that customizes lessons based on student performance. For example, if a student struggles with a math concept, the system adjusts content in real-time to offer additional examples or alternative explanations. This can dramatically improve learning outcomes, especially in large classrooms where one-on-one attention is limited. However, these technologies often require significant infrastructure—stable internet, devices, and platforms—which not all schools or students have equal access to. **Accessibility** remains a major concern, particularly in underfunded regions or among marginalized communities. Open-source AI tools and low-bandwidth alternatives may offer part of the solution. Another key factor is **educator training**. Even the best AI tools won’t make a difference if teachers don’t know how to integrate them effectively. Training programs should empower teachers, not replace them, and include input from the classroom to ensure that AI works in support of real pedagogical needs. Equity also means ensuring that AI systems themselves are free of **bias**. Models trained on data from wealthier or urban schools may not generalize well to rural or disadvantaged students. Transparent design and inclusive datasets are essential to avoid deepening existing educational gaps. Ultimately, democratising AI in education isn't just about deploying technology—it’s about aligning innovation with values of inclusion, fairness, and human-centered learning. Teachers and students must remain at the heart of any digital transformation. ",
-    "permalink": "/posts/",
+    "technology": [
+      "data",
+      "ai"
+    ],
+    "experience": [
+      "interactive-game"
+    ],
+    "challenges": [
+      "data-literacy"
+    ],
+    "thumbnail": "/assets/thumbnails/data-literacy-resources.png",
+    "description": "A set of game based resources to help teachers teach basic data literacy",
+    "content": " A set of game based resources to help teachers teach basic data literacy through interactive games and activities. ",
+    "permalink": "/tools/",
     "lunr_id": 5
   },
   {
-    "title": "Empowering Students with AI Literacy",
-    "year": 2023,
-    "issues": [
-      "digital divide",
-      "misinformation"
+    "title": "EdTech Pilot Framework",
+    "external_link": "https://digitalpromise.org/edtech-pilot-framework/",
+    "user_group": [
+      "government-officials",
+      "school-leaders",
+      "educators"
     ],
     "technology": [
-      "chatbots",
-      "recommendation systems"
+      "edtech"
     ],
-    "user_group": [
-      "students"
+    "experience": [
+      "framework"
     ],
-    "content": " AI is transforming every aspect of modern life—from how we search for information to the recommendations we see online. To thrive in this digital age, students must become not just users of AI, but informed **critics and creators**. That’s where **AI literacy** comes in. AI literacy means more than knowing what a chatbot is. It involves understanding how algorithms work, what data they use, and how they influence our choices. For example, students who understand how **recommendation systems** function are better equipped to recognize when their online experience is being shaped by commercial interests or algorithmic bias. In schools, teaching AI literacy requires cross-disciplinary collaboration. Computer science classes might teach technical basics, while social studies can explore ethical implications. Even English lessons can discuss how AI affects media and communication. One major barrier is the **digital divide**. Some students have daily access to smart devices and AI tools; others don’t. AI education must be inclusive, ensuring that resources and training are accessible to all students regardless of background or income level. Another challenge is **misinformation**. Generative AI tools can create convincing but false content. Without proper literacy, students may accept AI-generated outputs as fact. Teaching them to question sources, verify claims, and understand how deepfakes or auto-generated news work is essential. By building these skills early, we can empower the next generation to shape AI, not just be shaped by it. AI literacy isn’t optional—it’s foundational to modern citizenship. ",
-    "permalink": "/posts/",
+    "challenges": [
+      "procurement",
+      "policy"
+    ],
+    "thumbnail": "/assets/thumbnails/edtech-pilot-framework.png",
+    "description": "A step by step process to help you run successful EdTech pilots",
+    "content": " A step by step process to help you run successful EdTech pilots and make informed technology decisions. ",
+    "permalink": "/tools/",
     "lunr_id": 6
   },
   {
-    "title": "Parental Perspectives on AI in Schools",
-    "year": 2023,
-    "issues": [
-      "privacy",
-      "data security"
+    "title": "GenAI Arcade",
+    "external_link": "https://genai-arcade.net/",
+    "user_group": [
+      "parents",
+      "students",
+      "educators"
     ],
     "technology": [
-      "computer vision",
-      "learning analytics"
+      "genai"
     ],
+    "experience": [
+      "interactive-game",
+      "experiment"
+    ],
+    "challenges": [
+      "ai-literacy"
+    ],
+    "thumbnail": "/assets/thumbnails/genai-arcade.png",
+    "description": "Playful learning about GenAI and how it works",
+    "content": " Playful learning about GenAI and how it works. An interactive game experience for understanding generative AI. ",
+    "permalink": "/tools/",
+    "lunr_id": 7
+  },
+  {
+    "title": "Privacy Not Included: Protect Your Privacy from AI Chatbots",
+    "external_link": "https://www.mozillafoundation.org/en/privacynotincluded/articles/how-to-protect-your-privacy-from-chatgpt-and-other-ai-chatbots/",
+    "user_group": [
+      "parents",
+      "students",
+      "educators",
+      "school-leaders",
+      "government-officials"
+    ],
+    "technology": [
+      "chatbots",
+      "genai"
+    ],
+    "experience": [
+      "article"
+    ],
+    "challenges": [
+      "privacy"
+    ],
+    "thumbnail": "/assets/thumbnails/privacy-ai-chatbots.png",
+    "description": "Tips for protecting your privacy when using different AI Chatbots",
+    "content": " Tips for protecting your privacy when using different AI Chatbots like ChatGPT and others. ",
+    "permalink": "/tools/",
+    "lunr_id": 8
+  },
+  {
+    "title": "Privacy Not Included: Tips for Back to School Shopping",
+    "external_link": "https://www.mozillafoundation.org/en/privacynotincluded/articles/tips-for-safer-back-to-school-shopping-your-kids-tech-privacy-cheat-sheet/",
     "user_group": [
       "parents"
     ],
-    "content": " As AI systems become increasingly common in schools, parents are asking critical questions about how this technology impacts their children. From smart cameras to real-time dashboards, AI-driven tools collect and analyze vast amounts of student data—raising concerns around **privacy**, **data security**, and informed consent. **Learning analytics** platforms can track everything from quiz scores to how long a student spends on a reading. While these insights can help teachers personalize instruction, parents worry about how the data is stored, who has access to it, and whether it could be used for unintended purposes. Some schools have implemented **computer vision** tools to monitor classrooms, detect behavioral issues, or even take attendance. While marketed as tools for safety and engagement, these systems may feel invasive. Parents often feel left out of the conversation when such technologies are deployed. The lack of clear regulation adds to the concern. In many countries, there’s no specific legal framework governing AI use in schools, leaving decisions up to vendors or individual school boards. Parents want transparency—what data is collected, how long it's kept, and whether it’s shared with third parties. To build trust, schools need to create open communication channels with families. Consent processes should be meaningful, not buried in terms of service agreements. Schools might also consider involving parents in procurement and evaluation decisions for AI tools. Ultimately, parents aren’t rejecting AI outright—they’re asking for **ethical, transparent, and child-focused deployment**. When implemented thoughtfully, AI can support student success without sacrificing fundamental rights. ",
-    "permalink": "/posts/",
-    "lunr_id": 7
+    "technology": [
+      "edtech"
+    ],
+    "experience": [
+      "article"
+    ],
+    "challenges": [
+      "privacy"
+    ],
+    "thumbnail": "/assets/thumbnails/privacy-back-to-school.png",
+    "description": "Tips for choosing products that protect your child's privacy",
+    "content": " Tips for choosing products that protect your child's privacy during back-to-school shopping season. ",
+    "permalink": "/tools/",
+    "lunr_id": 9
+  },
+  {
+    "title": "UK Exam Algorithm Controversy Game",
+    "external_link": "https://www.edufuturesstudio.com/uk-exam-algorithm-game",
+    "user_group": [
+      "parents",
+      "students"
+    ],
+    "technology": [
+      "decision-trees",
+      "machine-learning"
+    ],
+    "experience": [
+      "interactive-game"
+    ],
+    "challenges": [
+      "ranking",
+      "ai-literacy",
+      "policy"
+    ],
+    "thumbnail": "/assets/thumbnails/uk-exam-algorithm.png",
+    "description": "An exploration of a complex topic - what would you have done?",
+    "content": " An exploration of a complex topic - what would you have done? Interactive game exploring the UK's 2020 exam algorithm controversy. ",
+    "permalink": "/tools/",
+    "lunr_id": 10
   }
 ]

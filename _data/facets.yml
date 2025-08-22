@@ -8,7 +8,12 @@ technology:
   multiple: true
   property: technology
 
-issues:
-  label: "Issues"
+challenges:
+  label: "Challenges"
   multiple: true
-  property: issues
+  property: challenges
+
+experience:
+  label: "Experience"
+  multiple: true
+  property: experience

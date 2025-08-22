@@ -41,7 +41,7 @@ _Facets_ also allows you to create galleries for subsets of your collections. A 
 
 `{% raw %}{% include gallery.html collection='qatar' field='object_type' value='portrait' num_column=4 %}{% endraw %}`
 
-The gallery that results from this instruction only shows portraits. This `include` command is slightly different than the one for browsing the whole collection. They both share a `collection:` and a `num_column:` variable. To use this `include`, though, you need to declare a `field:` variable. This is equivalent to a column from your data. Then you pick the `value:` that you want to limit results to. 
+The gallery that results from this instruction only shows portraits. This `include` command is slightly different than the one for browsing the whole collection. They both share a `collection:` and a `num_column:` variable. To use this `include`, though, you need to declare a `field:` variable. This is equivalent to a column from your data. Then you pick the `value:` that you want to limit results to.
 
 The `facet_by:` is optional. If we don't want to facet further, as in this case, we simply leave it out. In the second example on the same page, we create a subset based on one category and `facet_by` two others, `location` and `current_location`.
 
@@ -54,7 +54,7 @@ _Facets_ is a prototype, just as _Wax_ itself is a prototype, a tool to think wi
 
 The CSS that determines the look of the site is done using a combination of SASS and the bootstrap framework. To change some common variables, like colors or fonts, you can edit the `/assets/css/style.scss` file. You can always override our own choices from this file as well. You can also add your own CSS files to the `_sass` folder, and simply import them into the main sass file above.
 
-To change the description section of our cards, for ex. "A manuscript from Turkey (1801)," go to the "CONSTRUCTED CARD TEXT" section of the `gallery.html` file. 
+To change the description section of our cards, for ex. "A manuscript from Turkey (1801)," go to the "CONSTRUCTED CARD TEXT" section of the `gallery.html` file.
 
 ## ... use Facets with another Wax theme
 
