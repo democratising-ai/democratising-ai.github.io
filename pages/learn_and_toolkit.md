@@ -1,7 +1,7 @@
 ---
 layout: page
 title:
-permalink: /learn_and_toolkit/
+permalink: /learn-and-toolkit/
 gallery: true
 ---
 <h3>Tools & Resources</h3>

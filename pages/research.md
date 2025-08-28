@@ -6,7 +6,6 @@ gallery: true
 ---
 
 <script>
-// Add class to body to indicate sidebar is present
 document.body.classList.add('has-sidebar');
 </script>
 

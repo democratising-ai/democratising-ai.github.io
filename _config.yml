@@ -60,7 +60,7 @@ menu:
   - label: "Research"
     link: "/posts/"
   - label: "Learn and Toolkit"
-    link: "/learn_and_toolkit/"
+    link: "/learn-and-toolkit/"
   - label: "Search"
     link: "/search/"
   - label: "About"

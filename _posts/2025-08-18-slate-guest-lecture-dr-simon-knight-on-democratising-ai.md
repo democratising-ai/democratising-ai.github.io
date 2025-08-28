@@ -12,7 +12,7 @@ As part of *An August of AI in Education* at the University of Bergen, SLATE is 
 📍 **Location:**  Norway, Bergen, University of Bergen, Christies gate 12, 2nd floor, SLATE common room
 
 <div style="display:flex; align-items:flex-start; gap:15px; ">
-  <img src="/assets/images/simon-knight-2.jpg" alt="Dr. Simon Knight" style="width:295px; height:197px;">
+  <img src="/assets/images/Simon-Knight-2.jpg" alt="Dr. Simon Knight" style="width:295px; height:197px;">
   <p style="max-width:600px;">
   In his lecture <em>“Democratising AI”</em>, Dr. Knight will explore how diverse stakeholders—from educators to policymakers—can work together to navigate the opportunities and challenges posed by AI in education. The talk will highlight recent work on policy dilemmas, stakeholder engagement, and international collaboration. <br>This event is part of the University’s preparations for the new national AI centre, <b>AI LEARN</b>, and aims to spark discussions on how AI can empower human learning.
   </p>
