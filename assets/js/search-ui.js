@@ -19,17 +19,26 @@ function getThumbnail(item, url) {
 }
 
 function displayResult(item, fields, url) {
-  // Create the individual post URL from the title
-  var link = '/posts/' + (item.title || 'untitled').toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
-    .replace(/\s+/g, '-') // Replace spaces with hyphens
-    .replace(/-+/g, '-') // Replace multiple hyphens with single
-    .trim() + '/';
+  var link;
+  var linkTarget = '';
+
+  // Check if item has an external link
+  if (item.external_link) {
+    link = item.external_link;
+    linkTarget = ' target="_blank" rel="noopener noreferrer"';
+  } else {
+    // Create the individual post URL from the title
+    link = '/posts/' + (item.title || 'untitled').toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
+      .replace(/\s+/g, '-') // Replace spaces with hyphens
+      .replace(/-+/g, '-') // Replace multiple hyphens with single
+      .trim() + '/';
+  }
 
   var title = item.title || 'Untitled';
-  var thumb = getThumbnail(item, url); // optional, remove if no thumbnails
+  var thumb = getThumbnail(item, url);
 
-  return `<div class="result"><a href="${link}">${thumb}<p><span class="title">${title}</span></p></a></div>`;
+  return `<div class="result"><a href="${link}"${linkTarget}>${thumb}<p><span class="title">${title}</span></p></a></div>`;
 }
 
 function startSearchUI(fields, indexFile, url) {

@@ -22,7 +22,7 @@ document.body.classList.add('has-sidebar');
 
 {% include gallery.html
     collection='posts'
-    facet_by='user_group|technology|issues'
+    facet_by='user_group|technology|challenges'
     num_column=3
     exclude_type='news' %}
 

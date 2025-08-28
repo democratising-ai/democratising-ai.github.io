@@ -129,9 +129,14 @@
               %} {{ value | slugify }} {% endfor %} {% elsif multi_value and item_values contains separator %} {% assign
               split_values=item_values | split: separator %} {% for value in split_values %} {{ value | slugify }} {%
               endfor %} {% elsif item_values %} {{ item_values | slugify }} {% endif %} {% endfor %} {% endif %}"
-              data-user-group="{% if item.user_group %}{% for group in item.user_group %}{{ group | slugify }} {% endfor %}{% endif %}"
-              data-technology="{% if item.technology %}{% for tech in item.technology %}{{ tech | slugify }} {% endfor %}{% endif %}"
-              data-challenges="{% if item.challenges %}{% for challenge in item.challenges %}{{ challenge | slugify }} {% endfor %}{% endif %}">
+              {% for facet in facet_list %}
+                {% if facet contains "*" %}
+                  {% assign facet_name = facet | remove: "*" %}
+                {% else %}
+                  {% assign facet_name = facet %}
+                {% endif %}
+                data-{{ facet_name | slugify }}="{% if item[facet_name] %}{% for value in item[facet_name] %}{{ value | slugify }} {% endfor %}{% endif %}"
+              {% endfor %}>
 
               <div class="card thumbnail-card{% if item.external_link %} has-external-link{% endif %}">
                 {% if item.thumbnail %}

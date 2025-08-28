@@ -40,8 +40,8 @@ $(document).ready(function () {
 
     // Handle checkbox changes
     $("#facets :checkbox").change(function () {
-        // Get the fieldset ID this checkbox belongs to
-        var facetName = $(this).attr('class');
+        // Use data-facet attribute instead of class
+        var facetName = $(this).data('facet') || $(this).attr('data-facet');
         var fieldsetId = facetName + "-set";
 
         // Get the checkbox ID
@@ -49,11 +49,16 @@ $(document).ready(function () {
 
         // Update facets object based on checkbox state
         if (this.checked) {
+            if (!facets[fieldsetId]) {
+                facets[fieldsetId] = [];
+            }
             facets[fieldsetId].push(valueId);
         } else {
-            facets[fieldsetId] = facets[fieldsetId].filter(function (value) {
-                return value != valueId;
-            });
+            if (facets[fieldsetId]) {
+                facets[fieldsetId] = facets[fieldsetId].filter(function (value) {
+                    return value != valueId;
+                });
+            }
         }
 
         // Apply filters
@@ -67,7 +72,7 @@ $(document).ready(function () {
         // Check if we have any active filters
         var anyActiveFilters = false;
         for (var i = 0; i < numberFacets; i++) {
-            if (facets[setIds[i]].length > 0) {
+            if (facets[setIds[i]] && facets[setIds[i]].length > 0) {
                 anyActiveFilters = true;
                 break;
             }
@@ -95,7 +100,7 @@ $(document).ready(function () {
                 var facetId = setIds[i];
 
                 // Skip facets with no active filters
-                if (facets[facetId].length === 0) {
+                if (!facets[facetId] || facets[facetId].length === 0) {
                     continue;
                 }
 
@@ -155,11 +160,14 @@ $(document).ready(function () {
                 var values = item.data(facetName);
 
                 if (values) {
-                    values.split(' ').forEach(function(value) {
-                        if (value) {
-                            availableValues[facetName].add(value);
-                        }
-                    });
+                    // Handle both string and array values
+                    if (typeof values === 'string') {
+                        values.split(' ').forEach(function(value) {
+                            if (value) {
+                                availableValues[facetName].add(value);
+                            }
+                        });
+                    }
                 }
             });
         });
@@ -168,7 +176,7 @@ $(document).ready(function () {
         $("#facets input[type='checkbox']").each(function() {
             var checkbox = $(this);
             var value = checkbox.attr('id');
-            var facetName = checkbox.data('facet');
+            var facetName = checkbox.data('facet') || checkbox.attr('data-facet');
             var isCurrentlySelected = checkbox.prop('checked');
 
             // Don't disable selected checkboxes
@@ -207,8 +215,12 @@ $(document).ready(function () {
             var item = $(this);
             var values = item.data(facetName);
 
-            if (values && values.split(' ').includes(value)) {
-                count++;
+            if (values) {
+                // Handle both string and array values
+                var valueArray = typeof values === 'string' ? values.split(' ') : values;
+                if (valueArray.includes(value)) {
+                    count++;
+                }
             }
         });
 

@@ -15,9 +15,22 @@ $(document).ready(function() {
     return params;
   }
 
+  // Get all available facet types dynamically
+  function getAvailableFacets() {
+    var facets = [];
+    $('#facets fieldset').each(function() {
+      var fieldsetId = $(this).attr('id');
+      if (fieldsetId) {
+        var facetName = fieldsetId.replace('-set', '');
+        facets.push(facetName);
+      }
+    });
+    return facets;
+  }
+
   // Check if any filters are actually active
   function hasActiveFilters() {
-    return $('.user-group:checked, .technology:checked, .challenges:checked').length > 0;
+    return $('#facets :checkbox:checked').length > 0;
   }
 
   // Show/hide active filters section based on actual filter state
@@ -34,19 +47,14 @@ $(document).ready(function() {
   function applyUrlFilters() {
     var params = getUrlParams();
 
-    // Check for user group filter
-    if (params.usergroup) {
-      $('#' + params.usergroup).prop('checked', true).change();
-    }
+    // For each URL parameter, try to find and check the corresponding checkbox
+    for (var param in params) {
+      var checkboxId = params[param];
+      var $checkbox = $('#' + checkboxId);
 
-    // Check for technology filter
-    if (params.tech) {
-      $('#' + params.tech).prop('checked', true).change();
-    }
-
-    // Check for challenge filter
-    if (params.challenge) {
-      $('#' + params.challenge).prop('checked', true).change();
+      if ($checkbox.length > 0) {
+        $checkbox.prop('checked', true).change();
+      }
     }
 
     // Update visibility after applying filters
@@ -54,9 +62,11 @@ $(document).ready(function() {
   }
 
   // Add a filter badge to the active filters section
-  function addFilterBadge(type, value) {
-    // Create more compact badge without type label
-    var displayValue = value.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  function addFilterBadge(facetName, value) {
+    // Create nice display text
+    var displayValue = value.replace(/-/g, ' ').replace(/_/g, ' ')
+      .replace(/\b\w/g, l => l.toUpperCase());
+
     var badge = $('<span class="badge badge-pill badge-primary filter-badge">' +
                   displayValue +
                   ' <button type="button" class="close" aria-label="Remove">&times;</button></span>');
@@ -80,39 +90,36 @@ $(document).ready(function() {
   // Update URL with current filters
   function updateUrl() {
     var params = [];
+    var availableFacets = getAvailableFacets();
 
-    // Get current usergroup from main URL if exists
+    // Get current usergroup from main URL if exists (for profile persistence)
     var currentUserGroup = new URLSearchParams(window.location.search).get('usergroup');
+    var hasUserGroupCheckbox = false;
 
-    // Check all user group checkboxes
-    var userGroups = [];
-    $('.user-group:checked').each(function() {
-      userGroups.push($(this).attr('id'));
+    // Process each available facet
+    availableFacets.forEach(function(facetName) {
+      var checkedBoxes = $('.' + facetName + ':checked');
+
+      if (checkedBoxes.length > 0) {
+        // Use the facet name directly as the URL parameter
+        // Just normalize it to remove underscores/hyphens
+        var paramName = facetName.replace(/-/g, '').replace(/_/g, '');
+
+        checkedBoxes.each(function(index) {
+          if (index === 0) { // Take first value for simplicity
+            params.push(paramName + '=' + $(this).attr('id'));
+          }
+        });
+
+        if (paramName === 'usergroup') {
+          hasUserGroupCheckbox = true;
+        }
+      }
     });
 
-    // If no checkbox selected but we have usergroup in URL, keep it
-    if (userGroups.length > 0) {
-      params.push('usergroup=' + userGroups[0]);
-    } else if (currentUserGroup) {
+    // Keep usergroup from profile selector if no checkbox is checked
+    if (currentUserGroup && !hasUserGroupCheckbox) {
       params.push('usergroup=' + currentUserGroup);
-    }
-
-    // Check all technology checkboxes
-    var technologies = [];
-    $('.technology:checked').each(function() {
-      technologies.push($(this).attr('id'));
-    });
-    if (technologies.length > 0) {
-      params.push('tech=' + technologies[0]);
-    }
-
-    // Check all challenge checkboxes
-    var challenges = [];
-    $('.challenges:checked').each(function() {
-      challenges.push($(this).attr('id'));
-    });
-    if (challenges.length > 0) {
-      params.push('challenge=' + challenges[0]);
     }
 
     // Update URL
@@ -124,33 +131,22 @@ $(document).ready(function() {
     history.pushState({}, '', newUrl);
   }
 
-  // Handle checkbox changes to update the active filters - ONLY ONE HANDLER
+  // Handle checkbox changes to update the active filters
   $('#facets :checkbox').change(function() {
     // Clear existing badges
     $('#filter-badges').empty();
 
-    // Add badges for selected filters
-    var hasFilters = false;
+    // Get all available facets dynamically
+    var availableFacets = getAvailableFacets();
 
-    // User Group filters - using hyphen
-    $('.user-group:checked').each(function() {
-      addFilterBadge('User Group', $(this).attr('id'));
-      hasFilters = true;
+    // Process each facet type
+    availableFacets.forEach(function(facetName) {
+      $('.' + facetName + ':checked').each(function() {
+        addFilterBadge(facetName, $(this).attr('id'));
+      });
     });
 
-    // Technology filters
-    $('.technology:checked').each(function() {
-      addFilterBadge('Technology', $(this).attr('id'));
-      hasFilters = true;
-    });
-
-    // challenge filters
-    $('.challenges:checked').each(function() {
-      addFilterBadge('challenge', $(this).attr('id'));
-      hasFilters = true;
-    });
-
-    // Show/hide active filters section based on actual selections
+    // Show/hide active filters section
     updateActiveFiltersVisibility();
 
     // Update URL
@@ -165,7 +161,7 @@ $(document).ready(function() {
     // Clear badges
     $('#filter-badges').empty();
 
-    // Force hide and update visibility
+    // Hide active filters
     $('#active-filters').hide().removeClass('show');
     updateActiveFiltersVisibility();
 
