@@ -35,10 +35,10 @@ Utilising social science and data science approaches, this project aims to democ
     <a href="https://www.sydney.edu.au/arts/about/our-people/academic-staff/kalervo.gulson.html" target="_blank" style="text-decoration:none; cursor:pointer;">
       <img src="/assets/images/Kalervo-Gulson.jpeg"
          alt="Professor Kalervo Gulson"
-         style="width:100px; height:95px; border-radius:10px; margin:8px; float:left;">
+         style="width:100px; height:100px; border-radius:10px; margin:8px; float:left;">
       Professor Kalervo Gulson<br>(Project lead)
     </a><br>
-    <span>The University of Sydney</span>
+    <span>University of Sydney</span>
   </div>
 
   <div class="col-xs-12 col-sm-6 col-md-4 views-row">
@@ -55,10 +55,10 @@ Utilising social science and data science approaches, this project aims to democ
     <a href="https://findanexpert.unimelb.edu.au/profile/876656-marcia-mckenzie" target="_blank">
       <img src="/assets/images/Marcia-McKenzie.jpeg"
          alt="Professor Marcia McKenzie"
-         style="width:100px; height:125px; border-radius:10px; margin:8px; float:left;">
+         style="width:100px; height:100px; border-radius:10px; margin:8px; float:left;">
       Professor Marcia McKenzie
     </a><br>
-    <span>The University of Melbourne</span>
+    <span>University of Melbourne</span>
   </div>
 
   <div class="col-xs-12 col-sm-6 col-md-4 views-row">
@@ -75,7 +75,7 @@ Utilising social science and data science approaches, this project aims to democ
     <a href="https://www4.uib.no/en/find-employees/Kirsty.Kitto" target="_blank">
       <img src="/assets/images/Kirsty-Kitto.jpeg"
          alt="Professor Kirsty Kitto"
-         style="width:100px; height:120px; border-radius:10px; margin:8px; float:left;">
+         style="width:100px; height:100px; border-radius:10px; margin:8px; float:left;">
       Professor Kirsty Kitto
     </a><br>
     <span>University of Technology Sydney<br>
@@ -99,6 +99,6 @@ Utilising social science and data science approaches, this project aims to democ
          style="width:100px; height:100px; border-radius:10px; margin:8px; float:left;">
       Dr José-Miguel Bello y Villarino
     </a><br>
-    <span>The University of Sydney</span>
+    <span>University of Sydney</span>
   </div>
 </div>

@@ -3,15 +3,18 @@ layout: home
 title: "Democratising AI"
 ---
 
-<section class="home-banner text-center"
-         style="background-image: url('/assets/images/banner.png');">
-</section>
-
 {% include profile_selector.html %}
 
 <div class="col-12 d-inline-flex align-items-center gap-2">
-  <p class="mb-0">Not sure which category fits you? Search all our articles, tools, and resources.</p>
-  <a href="/search/" class="btn btn-outline-secondary">Search</a>
+  <p class="mb-0">Not sure which category fits you?</p>
+    <button
+    type="button"
+    class="btn btn-outline-secondary"
+    onclick="window.location.href='/search/';"
+    style= "margin-left: 8px"
+  >
+    Search all our articles, tools, and resources
+  </button>
 </div>
 <div class="general-content mt-5">
   <div class="row">

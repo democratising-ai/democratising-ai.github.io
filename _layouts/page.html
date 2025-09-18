@@ -16,7 +16,7 @@ layout: default
   <div class="gallery">
     {% for item in page.gallery %}
     <a href="{{ item.url }}">
-      <img src="{{ item.image_path }}" alt="{{ item.alt }}" width="200" style="margin: 10px;">
+      <img src="{{ item.image_path }}" alt="{{ item.alt }}" style="margin: 10px; height: 80px; width: auto;">
     </a>
     {% endfor %}
   </div>

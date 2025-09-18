@@ -1,7 +1,46 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{%- include head.html -%}
+<body class ="home">
+  {%- include header.html -%}
+  <!-- Hero Banner -->
+  <section class="home-banner text-center d-flex flex-column justify-content-center align-items-center"
+         style="min-height: 200px; background-color: #ffffff;">
 
-<div class="home">
- {{content}}
-</div>
+    <!-- Typed Heading -->
+    <h1 class="text-black fw-bold display-4 fade-in">
+      DEMOCRATISING AI
+    </h1>
+    <!-- Subheading -->
+    <p class="text-black lead mt-3">
+      Making AI rules accessible, understandable, and participatory
+    </p>
+  </section>
+
+  <script>
+  const text = "DEMOCRATISING AI";
+  const container = document.getElementById("fade-in-hero");
+
+  [...text].forEach((char, i) => {
+    const span = document.createElement("span");
+    span.textContent = char;
+    span.style.opacity = 0;
+    span.style.transition = "opacity 0.5s";
+    container.appendChild(span);
+    setTimeout(() => { span.style.opacity = 1; }, i * 100); // delay per character
+  });
+  </script>
+
+  <main id="main-content" class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {%- include footer.html -%}
+</body>
+</html>

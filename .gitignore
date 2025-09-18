@@ -7,4 +7,6 @@ _site/
 .liquidrc
 *.ini
 *.bak
-
+scripts/
+.github/
+requirements.txt

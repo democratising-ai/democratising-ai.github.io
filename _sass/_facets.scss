@@ -9,22 +9,26 @@
   z-index: 1050;
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: $light-background;
+  height: 70px;
 }
 
 * {
   margin: 0;
 }
 
-html,
 body {
   height: 100%;
   font-family: $body-font;
-  padding-top: 40px;
+  padding-top: 70px;
 }
 
 main {
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 60px - 60px);
+  box-sizing: border-box;
 }
+
+// Headings
 
 h1,
 h2,
@@ -36,34 +40,46 @@ h6 {
 }
 
 // Links
-a {
-  color: #163b52;
+
+a:link {
+  color: blue;
+  //color: #163b52;
+}
+
+a:visited {
+  color: rgb(9, 0, 9);
 }
 
 a:hover {
   color: #0d1d27;
-  text-decoration: none;
+  text-decoration: underline;
+}
+
+a:active {
+  color: red;
 }
 
 a.action-button {
   background-color: #163b52;
-  color: $dark-link-hover;
+  color: white;
   margin: 1rem;
 }
 
 a.action-button:hover {
-  background-color: $light-background;
-  color: $light-link;
+  background-color: #f0f0f0;
+  color: #163b52;
 }
 
 // Banner
 .banner {
   background-color: $light-background;
   color: #000000;
+  z-index: 1050;
   height: fit-content;
-  padding: 10px 2rem;
+  padding: 1rem 2rem;
   font-family: $heading-font;
   font-size: 1.2rem;
+  position: relative;
 }
 
 .navbar {
@@ -78,12 +94,21 @@ a.action-button:hover {
   padding-bottom: 0.3125rem;
 }
 
-.banner a {
-  color: $light-link;
+.banner a:link {
+  color: #101214;
+}
+
+.banner a:visited {
+  color: #101214;
 }
 
 .banner a:hover {
-  color: $dark-link-hover;
+  color: #101214;
+  text-decoration: underline;
+}
+
+.banner a:active {
+  color: red;
 }
 
 .banner .dropdown-item {
@@ -99,7 +124,7 @@ a.action-button:hover {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 200px;
+  height: 39%;
   overflow: hidden;
 }
 
@@ -116,28 +141,12 @@ a.action-button:hover {
   }
 }
 
-// .item-metadata {
-//   padding: 3rem;
-// }
-
-// .metadata-block {
-//   font-family: $body-font;
-//   max-width: 100%;
-//   padding: 1rem;
-//   font-size: 1.2rem;
-
-//   dt {
-//     color: #000000;
-//     font-size: 1rem;
-//     font-family: $heading-font;
-//   }
-// }
-
-// SEARCH BOX STYLING
+// SEARCH BOX STYLING - Updated for proper alignment
 .search-block {
   position: relative;
-  padding: 15px !important;
+  padding: 15px 0 !important; // Remove horizontal padding to align with content
   margin: 20px 0 !important;
+  width: 100%; // Full width within container
 
   #search {
     border-style: groove;
@@ -150,14 +159,14 @@ a.action-button:hover {
     }
   }
 
-  #results {
+  #results { //TODO
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     z-index: 1000;
     background: white;
-    border: 1px solid #ddd;
+    //border: 4px solid #1868DB;
     border-top: none;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     max-height: 400px;
@@ -166,21 +175,21 @@ a.action-button:hover {
 
     .results-info {
       padding: 0.5rem 1rem;
-      background-color: #f8f9fa;
-      border-bottom: 1px solid #dee2e6;
+      background-color: #ffffff;
+      border-bottom: 1.5px solid #1868DB;
       margin: 0;
-      font-size: 0.9rem;
-      color: #6c757d;
-      display: none; // Hidden by default
+      font-size: 1.5rem;
+      color: #000000;
+      display: none;
 
       &.show {
-        display: block; // Show when search has results
+        display: block;
       }
     }
 
     .result {
       padding: 0.75rem 1rem;
-      border-bottom: 1px solid #f1f1f1;
+      border-bottom: 1px solid #e3e3e3;
 
       a {
         color: $dark-text;
@@ -266,89 +275,112 @@ p.card-text {
 }
 
 /*
-    COMPACT SIDEBAR LAYOUT - FIXED POSITION
+    FIXED SIDEBAR LAYOUT WITH PROPER CONTAINMENT
 */
 
-// Main layout container
+// Main layout container - Updated
 .full-width-gallery-layout {
   display: flex;
-  width: 100vw;
+  width: 100%;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  min-height: 100vh;
+  min-height: calc(60vh - 60px - 10vh); // Subtract header and footer height
 }
 
-// Compact external sidebar for filters
+// Sidebar for filters - Updated with proper containment
 .sidebar-filters-external {
   width: 200px;
   min-width: 200px;
   background-color: #ffffff;
-  border-right: 0.5px solid #eceff1;
+  // border-right: 0.5px solid #eceff1;
   z-index: 100;
   position: fixed;
   left: 0;
-  top: 140px;
-  bottom: 10vh;
+  //top: 70px; // Position below fixed header (match header height)
+  bottom: 0; // Extend to bottom
+  height: calc(100vh - 70px - 70px); // Full height minus header
   overflow-y: auto;
+  overflow-x: hidden;
 
-  // Hide scrollbar
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  // Custom scrollbar for better aesthetics
   &::-webkit-scrollbar {
-    display: none;
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+
+    &:hover {
+      background: #555;
+    }
   }
 }
 
-// Compact filters container
+// Filters container - Updated
 .filters-sticky {
   padding: 8px;
-  position: static;
+  position: relative; // Changed from static
+  // min-height: 100%;
+  // padding-bottom: 20px; // Extra padding at bottom
 }
 
-// Compact filter section title
-.filters-title {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 6px;
-  margin-left: 14px;
-  color: #343a40;
-  padding-bottom: 0.5px;
-}
-
-// Main content area with left margin for fixed sidebar
+// Main content area - Updated for proper alignment
 .main-content-with-sidebar {
   flex: 1;
-  margin-left: 200px;
-  padding: 20px 25px;
-  overflow: hidden;
+  // margin-left: 2vh; // Match sidebar width
+  // padding: 0 25px 20px 25px; // Top padding removed to align with search
+  min-height: calc(100vh - 60px - 10vh); // Proper height calculation
+  overflow: visible; // Changed from hidden
+  position: relative;
+
+  // Ensure search block aligns properly within content area
+  .search-block {
+    margin-top: 20px !important;
+    margin-bottom: 15px !important;
+  }
 }
 
-/*
-    COMPACT ACTIVE FILTERS SECTION - HORIZONTAL LAYOUT
-*/
+// Gallery container adjustments
+.wax-gallery-container {
+  padding-bottom: 2rem;
+  padding-top: 0;
+  margin-top: 0;
+  width: 100%; // Ensure full width within container
+}
+
+.wax-inline-container {
+  padding: 0;
+  margin: 0;
+  width: 100%; // Full width
+}
+
+// Active filters section - Updated for better alignment
 #active-filters {
   background-color: #ffffff;
-  padding: 8px 12px;
-  border-radius: 4px;
-  border: 1px solid #ffffff;
+  padding: 5px 5px;
+  // border-radius: 4px;
+  // border: 1px solid #dee2e6;
   margin-bottom: 15px;
+  margin-top: 10px; // Add top margin for spacing
   display: flex !important;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
+  width: 100%; // Full width within container
 
   h5 {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #0c5460;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #1868DB;
+;
     margin: 0;
     white-space: nowrap;
   }
 
-  // Inline layout for badges
   #filter-badges {
     display: flex;
     flex-wrap: wrap;
@@ -356,21 +388,20 @@ p.card-text {
     margin: 0;
   }
 
-  // Compact filter badges
   .filter-badge {
     display: inline-flex;
     align-items: center;
-    background-color: #17a2b8;
+    background-color: #1868DB;
     color: white;
-    padding: 2px 6px;
-    border-radius: 10px;
-    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-size: 0.9rem;
     white-space: nowrap;
 
     .close {
       color: white;
       opacity: 0.8;
-      font-size: 0.7rem;
+      font-size: 1rem;
       margin-left: 4px;
       line-height: 0.7;
       padding: 0;
@@ -384,10 +415,9 @@ p.card-text {
     }
   }
 
-  // Compact clear button
   #clear-all-filters {
-    font-size: 0.75rem;
-    padding: 2px 6px;
+    font-size: 1rem;
+    padding: 2px 8px;
     white-space: nowrap;
   }
 }
@@ -522,7 +552,7 @@ legend {
 // Selected checkbox styling
 .facet-item input[type="checkbox"]:checked + label {
   font-weight: 600;
-  color: #007bff;
+  color: #1868DB;
 }
 
 // Compact facet counter styling
@@ -574,12 +604,84 @@ fieldset {
     ROW LAYOUT FOR NEWS ITEMS - COMPACT SPACING
 */
 
-// Override gallery grid to show items in rows with less spacing
+// Gallery items row layout - ensure proper width
 .wax-gallery .row {
   display: flex;
   flex-direction: column;
-  gap: 8px; // Reduced gap between cards
-  margin: 0; // Remove default margin
+  gap: 8px;
+  margin: 0;
+  width: 100%; // Full width
+
+  // Ensure items take full width
+  .gallery-item-facets {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    padding: 0 !important;
+    margin-bottom: 8px;
+
+    .card {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      height: auto;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: box-shadow 0.2s ease;
+      margin-bottom: 0;
+      width: 100%; // Full width
+
+      &:hover {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+
+      &.has-external-link {
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+          transform: translateY(-2px);
+        }
+      }
+    }
+
+    .card-img-top {
+      width: 140px;
+      min-width: 140px; // Prevent shrinking
+      height: 120px;
+      object-fit: cover;
+      border-radius: 0;
+      flex-shrink: 0;
+    }
+
+    .card-body {
+      flex: 1;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.4;
+      margin-bottom: 0;
+
+      strong {
+        color: #333;
+        font-weight: 600;
+      }
+    }
+  }
 }
 
 .gallery-item-facets {
@@ -669,18 +771,28 @@ fieldset {
 */
 @media (max-width: 767.98px) {
   body {
-    padding-top: 100px;
+    padding-top: 70px; // Match updated header height
   }
 
   main {
-    min-height: calc(100vh - 180px);
+    min-height: calc(100vh - 60px - 10vh);
     padding: 1rem;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   body {
-    padding-top: 90px;
+    padding-top: 70px;
+  }
+
+  // Adjust sidebar width for tablets
+  .sidebar-filters-external {
+    width: 180px;
+    min-width: 180px;
+  }
+
+  .main-content-with-sidebar {
+    margin-left: 180px;
   }
 }
 
@@ -688,12 +800,7 @@ fieldset {
 @media (max-width: 991.98px) {
   .full-width-gallery-layout {
     flex-direction: column;
-    width: 100%;
-    position: static;
-    left: auto;
-    right: auto;
-    margin-left: 0;
-    margin-right: 0;
+    min-height: auto;
   }
 
   .sidebar-filters-external {
@@ -702,12 +809,16 @@ fieldset {
     position: static;
     height: auto;
     border-right: none;
-    border-bottom: 1px solid #dee2e6;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding-bottom: 10px; // Reduce padding on mobile
+    max-height: 40vh; // Limit height on mobile
+    overflow-y: auto;
   }
 
   .main-content-with-sidebar {
     margin-left: 0;
+    padding: 15px;
+    min-height: auto;
   }
 
   .filters-sticky {
@@ -738,12 +849,29 @@ fieldset {
   // Stack news items on mobile
   .gallery-item-facets .card {
     flex-direction: column;
-  }
 
-  .gallery-item-facets .card-img-top {
-    width: 100%;
-    height: 200px;
+    .card-img-top {
+      width: 100%;
+      height: 200px;
+    }
   }
+}
+
+// Ensure proper z-index hierarchy
+.navbar .dropdown-menu {
+  position: absolute;
+  z-index: 1051;
+}
+
+// Page-specific adjustments
+body.has-sidebar {
+  overflow-x: hidden; // Prevent horizontal scroll
+}
+
+// Ensure content doesn't get cut off
+.wrapper {
+  width: 100%;
+  position: relative;
 }
 
 // Dropdown menu z-index fix
