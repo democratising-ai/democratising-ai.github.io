@@ -3,22 +3,35 @@ layout: none
 ---
 [
   {
-    "title": "Template",
-    "year": 2024,
-    "user_group": [
-      "parents",
-      "students",
-      "educators"
-    ],
-    "content": " ## Introductound bias, privacy, access, and the potential de-skilling of educators. This article explores both the promise and pitfalls of AI in education, focusing on its impact on equity, pedagogy, and the broader mission of democratic education.ion Artificial Intelligence is reshaping the educational landscape. From adaptive learning platforms to automated grading systems, AI offers tools that promise to individualize instruction, improve learning outcomes, and reduce administrative burdens. However, the integration of AI in education also presents new challenges ar ## AI Applications in Education ### Personalized Learning AI-driven platforms such as DreamBox, Squirrel AI, and Khan Academy use machine learning to analyze student performance and tailor content in real-time. These systems adapt difficulty, pace, and type of content to match each learner’s needs—potentially supporting differentiated instruction at scale. ### Intelligent Tutoring Systems ITS like Carnegie Learning provide real-time feedback and guided problem-solving. While not replacements for human teachers, they can supplement instruction and offer extra support for struggling students. ### Administrative Automation AI tools now assist in automating grading (especially for multiple-choice and short-answer formats), scheduling, and plagiarism detection. This reduces teachers’ administrative load, freeing time for human-centric teaching. ## Risks and Challenges ### Digital Divide and Access Despite AI’s potential to increase access, it can also deepen the digital divide. Students in low-income or rural areas may lack the infrastructure, devices, or connectivity to benefit from AI tools—perpetuating educational inequality. ### Data Privacy and Surveillance Many AI educational tools collect extensive personal data. Without proper safeguards, student data may be sold, misused, or inadequately protected. Surveillance-based applications can undermine trust and student autonomy. ### Bias in AI Models If training data reflects biased assumptions (e.g., standardized test scores that correlate with socioeconomic status), AI systems may reinforce existing disparities. For example, automatic essay grading tools have been criticized for favoring verbose writing over content quality. ### Devaluation of Teachers There’s a risk of framing teachers as obsolete. While AI can enhance instruction, teaching involves emotional labor, creativity, and ethical judgment—qualities machines cannot replicate. Teachers must remain central to the learning process. ## Ensuring Ethical Implementation ### Inclusive Design AI tools should be co-designed with educators and students to ensure usability, relevance, and contextual appropriateness. Involving marginalized communities in development can reduce bias and promote inclusion. ### Regulation and Governance Clear policies are needed to govern AI use in education, including data protection standards, bias audits, and opt-in consent mechanisms. Government oversight and institutional ethics boards play key roles. ### Teacher Training Educators need support to understand and integrate AI tools effectively. Professional development programs must include not only technical training but also critical pedagogy around the ethical use of AI. ## Conclusion AI in education is not a silver bullet. When used thoughtfully and ethically, it can support student success and democratize access to quality learning. However, without vigilance, it risks reinforcing systemic inequities and disempowering educators. Ultimately, the goal should not be to automate education but to **enhance it in service of human flourishing**. ",
+    "title": "EdTech Toolkit",
+    "content": " Discover the strengths of our ‘EdTech Toolkit’ developed to allow educators and policy makers explore the use and effects of AI in education. Leon Furze highlights how this platform is helping understand the risks and opportunities of Al and EdTech integration in education, empowering educators to explore and test new possibilities. In the interview, Furze tells our Lead Researcher, Professor Kalervo N. Gulson what he liked about our Possibilities Matrix and how it can be used to find alternatives, workarounds and stretch your thinking. 🔗 [Link to LinkedIn News:](https://www.linkedin.com/feed/update/urn:li:activity:7266600521006743553/) https://www.linkedin.com/feed/update/urn:li:activity:7266600521006743553/ 🔗 [See here for more information on the EdTech Toolkit:](https://lnkd.in/gv9WwGiN) https://lnkd.in/gv9WwGiN ",
     "permalink": "/posts/",
     "lunr_id": 0
+  },
+  {
+    "title": "Policy Workshop",
+    "content": " The future of education is being shaped by artificial intelligence. Whilst policy makers are taking steps to balance the opportunities and risks of AI, young people are rarely part of these conversations. On October 21st, the team at the Education Futures Studio Kalervo N. Gulson, Shannon Huang, and Penny Vlies, along with colleagues Bronwyn Cumbo Simon Knight from University of Technology Sydney, ran a workshop that was focused on policy for and by young people. We brought together students from NSW public secondary schools, teachers, school leaders, education policy makers and academics, inviting them to explore issues relating to the fairness of AI in education together, and codesign strategies to address these issues. This process was enabled through the “AI Fairness Game”, which Bronwyn Cumbo led creation of. The AI Fairness game is a ‘serious’ role playing game that invites participant teams to step into the shoes of school students, teachers, and principals and work together to co-create a fairer experience of schooling for students. Guided by game master, Bronwyn Cumbo, teams were each presented a scenario that described the use of AI in schools, including teacher evaluation, student class allocation, access for students with disabilities, and career advice. The scenarios were designed to show different aspects of fairness, and encourage thinking about this over the specific technologies. In character, the school teams co-explored the fairness issues relating to their scenario, and co-designed policy pathways and recommendations to effectively address them, drawing on available resources, expertise and perspectives. Part of work funded by the Australian Public Policy Institute the workshop embraced the idea that it is okay for there to be shared uncertainty about what to do about AI in education. This uncertainty can cultivate a space to come up with genuine and creative solutions with the shared pool of knowledge from young people whilst also having fun. Stay tuned for more details at Education Futures Studio and Australian Public Policy Institute about the policy opportunities identified in the workshop, and the AI Fairness game. 🔗 [Link to LinkedIn News:](https://www.linkedin.com/feed/update/urn:li:activity:7259066794949160960/) https://www.linkedin.com/feed/update/urn:li:activity:7259066794949160960// 🔗 [See here for more information on the EdTech Toolkit:](https://lnkd.in/gv9WwGiN) https://lnkd.in/gv9WwGiN ",
+    "permalink": "/posts/",
+    "lunr_id": 1
   },
   {
     "title": "SLATE Guest Lecture: Dr. Simon Knight on Democratising AI",
     "content": " As part of *An August of AI in Education* at the University of Bergen, SLATE is pleased to host Dr. Simon Knight, Associate Professor at the University of Technology Sydney (UTS) Transdisciplinary School. 📅 **Date:** August 21, 2025 🕙 **Time:** 10:00–11:00 📍 **Location:** Norway, Bergen, University of Bergen, Christies gate 12, 2nd floor, SLATE common room In his lecture “Democratising AI”, Dr. Knight will explore how diverse stakeholders—from educators to policymakers—can work together to navigate the opportunities and challenges posed by AI in education. The talk will highlight recent work on policy dilemmas, stakeholder engagement, and international collaboration. This event is part of the University’s preparations for the new national AI centre, AI LEARN, and aims to spark discussions on how AI can empower human learning. Dr. Simon Knight. Photo by Andy Roberts. 🔗 [Register for the seminar here](https://slate.uib.no/events/simon-knight) https://slate.uib.no/events/simon-knight *Please note: Registration closes on August 21 at 09:30.* ",
     "permalink": "/posts/",
-    "lunr_id": 1
+    "lunr_id": 2
+  },
+  {
+    "title": "A technical democracy design experiment: Making the UK exam algorithm controversy game",
+    "year": 2024,
+    "content": " ## Paper Information - **Authors**: Teresa Swist, Kalervo N. Gulson, Claire Benn, Kirsty Kitto, Simon Knight, Vincent Zhang - **Year**: 2024 --- *The full paper is [available here](https://linkinghub.elsevier.com/retrieve/pii/S0142694X24000085).* ",
+    "permalink": "/posts/",
+    "lunr_id": 3
+  },
+  {
+    "title": "LAK26 Workshop",
+    "content": " #Democratising Policy in the age of AI: Bridging Socio-Technical Divides For Adaptive Policy Making A half day workshop for the [LAK'26 Conference](https://url.au.m.mimecastprotect.com/s/_OGyCXLWMAfnyMgEmfVh0uWUyWA?domain=solaresearch.org) ##How can we navigate Disagreement? We live in an age of socio-technical uncertainty exacerbated by societal disagreement about how to navigate it. The last 10 years have seen a profound set of issues emerging in our society at large which have impacted our approach to education. Topics recently navigated by policy makers include: how to utilise data for Learning Analytics (LA) and Artificial Intelligence (AI) tools; the rise of disinformation on the web and in social media; disagreements about how to respond to Covid-19; trust in AI and other technologies; and the emergence of GenAI and the controversies that it introduces about how to assure integrity of student authorship and learning. In each scenario, we see sets of stakeholders navigating disagreement about what policies we need to address a problem and the effectiveness of policies, in a contested space where any policy is difficult to operationalize. Furthermore, these complex socio-technical problems spaces often bring with them significant disagreements about what the problem even is, adding to the existing complexities and difficulties in policy making ([Fazelpour & Fleisher, 2025](https://url.au.m.mimecastprotect.com/s/whVqCYW8MBS3J6vV5F9iouxByVf?domain=dl.acm.org); [Kippin & Cairney, 2022](https://url.au.m.mimecastprotect.com/s/Po4WCZY1WDcMVowKzuysquBUA3h?domain=link.springer.com). Nonetheless, policy must still be made, and over the decades a number of different methods have emerged to support people in navigating uncertainty about how we might develop technology and the policies that surround its use. However, these methods are often developed to support the challenges of developing policy, including for example: the ethical development of the technology; how we might learn when to trust and critically use it; legal and ethical frameworks about how technology should be designed, developed and used; and participatory approaches to stakeholder engagement and how it might be improved. A number of projects are currently underway that are attempting to improve this situation, and this workshop will bring together people interested in moving policy making about the use of Artificial Intelligence and Data Analysis (AIDA) in educational settings towards more adaptive and anticipatory models. ##Workshop Aims and details This workshop seeks to advance our methods for supporting educational stakeholders to productively collaborate with AIDA experts to improve policymaking in times of significant uncertainty. We will work to construct and publicly release a toolkit of services and approaches that can be used by those trying to support policy making, and evaluation,around the use of AIDA in educational settings. This toolkit will help people to work across boundaries of disciplinary knowledge, stakeholder expertise, ethics and trust. Starting with a rapid introduction to the various challenges faced by educational policy makers in a selection of geopolitical contexts, we will then explore and critique the pros and cons of methods for bringing multiple stakeholders from a wide variety of different backgrounds together into fruitful conversations around the use of AIDA in education. The workshop will focus upon extending a variety of toolkits and resources that are now available. We anticipate that participants will emerge from the workshop with new means for constructing fruitful consultative and participatory approaches with a broad range of stakeholders in complex educational policymaking environments. Some of the potential approaches that have started to arise in this space will be explored, and applied to a specific policy making problem: - How can we assure that the human rights of students are protected given the rise of AIDA usage in education? Approaches to be explored in this workshop will include: - Algorithmic audits and other legal instruments - Hybrid forums, public consultations, citizens' assemblies etc. - Algorithm games and other forms of game based learning such as serious games that support critical cross-stakeholder engagement with complex problems (e.g. GenAI arcade, UK Exam Algorithm Game). ([Ali et al., 2023](https://url.au.m.mimecastprotect.com/s/sOPeC1WL9zSpDE0J8sYtXuVcgUa?domain=doi.org); [Gulson et al., 2021](https://url.au.m.mimecastprotect.com/s/s481C2xM9AUkJE457TMuqu57t7P?domain=theconversation.com); [Hao & Stray, 2019](https://url.au.m.mimecastprotect.com/s/ZKkMC3QN90SmJRPDZuYC6uQVQub?domain=technologyreview.com); [Swist et al., 2023](https://url.au.m.mimecastprotect.com/s/smhxC4QO9DSJQ7n4rfNFxu4gvfh?domain=doi.org); [Swist, Gulson, Knight, et al., 2024](https://url.au.m.mimecastprotect.com/s/SZ2tC5QPWES0QWzkAF4HOukiiJE?domain=doi.org); [Swist, Gulson, & Thompson, 2024](https://url.au.m.mimecastprotect.com/s/zMAIC6XQ07toAGgLXFjI4u541_5?domain=doi.org); [Thompson et al., 2023](https://url.au.m.mimecastprotect.com/s/SFX0C71RA7HmxW0GLurSDuoTJav?domain=doi.org) - Tools and services for modelling educational scenarios and supporting counterfactual reasoning (e.g. graphical causal models, the whatif tool) ## Who should attend? We seek participants who are interested in supporting the process of boundary crossing between one (or more) of the following general perspectives: - Policy makers: Those attempting to develop policy to respond to the new wave of AI that is impacting education - AIDA developers: Those building tools, new algorithmic approaches, and other technological solutions that satisfy legal, ethical and other Responsible Research and Innovation (RRI) principles. - Education stakeholders: Those attempting to engage with people developing policies or tools about AIDA and its use in education (e.g. student, teacher, parent), but who are often not included in policy discussions or decisions. ",
+    "permalink": "/posts/",
+    "lunr_id": 4
   },
   {
     "title": "AI Literacy Day",
@@ -41,7 +54,7 @@ layout: none
     "description": "Activities and resources to improve your AI literacy",
     "content": " Activities and resources to improve your AI literacy through professional development opportunities. ",
     "permalink": "/tools/",
-    "lunr_id": 2
+    "lunr_id": 5
   },
   {
     "title": "AI Literacy Framework",
@@ -62,7 +75,7 @@ layout: none
     "description": "A number of different AI literacy frameworks are in development... This page will help you to understand work in this area.",
     "content": " A number of different AI literacy frameworks are in development... This page will help you to understand work in this area. ",
     "permalink": "/tools/",
-    "lunr_id": 3
+    "lunr_id": 6
   },
   {
     "title": "AI Literacy Frameworks for Children Skills-Changing",
@@ -83,7 +96,7 @@ layout: none
     "description": "A number of different AI literacy frameworks are in development... This page will help you to understand work in this area.",
     "content": " A number of different AI literacy frameworks are in development... This page will help you to understand work in this area. ",
     "permalink": "/tools/",
-    "lunr_id": 4
+    "lunr_id": 7
   },
   {
     "title": "Data Literacy Resources",
@@ -105,7 +118,7 @@ layout: none
     "description": "A set of game based resources to help teachers teach basic data literacy",
     "content": " A set of game based resources to help teachers teach basic data literacy through interactive games and activities. ",
     "permalink": "/tools/",
-    "lunr_id": 5
+    "lunr_id": 8
   },
   {
     "title": "EdTech Pilot Framework",
@@ -129,7 +142,7 @@ layout: none
     "description": "A step by step process to help you run successful EdTech pilots",
     "content": " A step by step process to help you run successful EdTech pilots and make informed technology decisions. ",
     "permalink": "/tools/",
-    "lunr_id": 6
+    "lunr_id": 9
   },
   {
     "title": "GenAI Arcade",
@@ -153,7 +166,7 @@ layout: none
     "description": "Playful learning about GenAI and how it works",
     "content": " Playful learning about GenAI and how it works. An interactive game experience for understanding generative AI. ",
     "permalink": "/tools/",
-    "lunr_id": 7
+    "lunr_id": 10
   },
   {
     "title": "Privacy Not Included: Protect Your Privacy from AI Chatbots",
@@ -179,7 +192,7 @@ layout: none
     "description": "Tips for protecting your privacy when using different AI Chatbots",
     "content": " Tips for protecting your privacy when using different AI Chatbots like ChatGPT and others. ",
     "permalink": "/tools/",
-    "lunr_id": 8
+    "lunr_id": 11
   },
   {
     "title": "Privacy Not Included: Tips for Back to School Shopping",
@@ -200,7 +213,7 @@ layout: none
     "description": "Tips for choosing products that protect your child's privacy",
     "content": " Tips for choosing products that protect your child's privacy during back-to-school shopping season. ",
     "permalink": "/tools/",
-    "lunr_id": 9
+    "lunr_id": 12
   },
   {
     "title": "UK Exam Algorithm Controversy Game",
@@ -225,6 +238,6 @@ layout: none
     "description": "An exploration of a complex topic - what would you have done?",
     "content": " An exploration of a complex topic - what would you have done? Interactive game exploring the UK's 2020 exam algorithm controversy. ",
     "permalink": "/tools/",
-    "lunr_id": 10
+    "lunr_id": 13
   }
 ]
