@@ -10,29 +10,4 @@ layout: default
     <div class="post-content">
         {{ content }}
     </div>
-
-    <div class="post-footer">
-        <h4>Related Topics In</h4>
-        <div class="post-topic-links">
-            {% if page.user_group %}
-            {% for group in page.user_group %}
-            <a href="{{ '/posts/' | relative_url }}?usergroup={{ group | slugify }}" class="badge badge-primary">{{
-                group }}</a>
-            {% endfor %}
-            {% endif %}
-
-            {% if page.technology %}
-            {% for tech in page.technology %}
-            <a href="{{ '/posts/' | relative_url }}?tech={{ tech | slugify }}" class="badge badge-info">{{ tech }}</a>
-            {% endfor %}
-            {% endif %}
-
-            {% if page.challenges %}
-            {% for challenge in page.challenges %}
-            <a href="{{ '/posts/' | relative_url }}?challenge={{ challenge | slugify }}" class="badge badge-warning">{{ challenge
-                }}</a>
-            {% endfor %}
-            {% endif %}
-        </div>
-    </div>
 </article>

@@ -147,7 +147,7 @@
                 <div class="card-body">
                   {% if item.external_link %}
                     <a href="{{ item.external_link }}" target="_blank" rel="noopener noreferrer">
-                      <h3 class="card-title">{{ item.label | default: item.title }}</h3>
+                      <h3 class="card-title">{{ item.label | default: item.title}}<span> [external link]</span></h3>
                     </a>
                   {% else %}
                     <a href="{{ item.url | relative_url }}">
@@ -160,7 +160,6 @@
                     {% if item.excerpt %}
                     {{ item.excerpt | strip_html | truncatewords: 30 }}
                     {% endif %}
-                    <br><br>
 
                     {% if item.user_group %}
                     <strong>For:</strong>
@@ -196,8 +195,7 @@
                     {% if item.description %}
                     {{ item.description }}
                     {% endif %}
-                    <br><br>
-
+                    <br>
                     {% if item.user_group %}
                     <strong>For:</strong>
                     {% if item.user_group.first %}
@@ -215,13 +213,6 @@
                     {% else %}
                     {{ item.experience }}
                     {% endif %}
-                    {% endif %}
-
-                    {% if item.external_link %}
-                    <br>
-                    <small class="text-muted">
-                      <i class="fas fa-external-link-alt"></i> External Resource
-                    </small>
                     {% endif %}
                   </p>
                 {% else %}
@@ -241,3 +232,29 @@
     </div> <!-- /.wax-gallery-container -->
   </div> <!-- /.main-content-with-sidebar -->
 </div> <!-- /.full-width-gallery-layout -->
+
+<script>
+$(document).ready(function() {
+  // Make entire card clickable
+  $('.gallery-item-facets .card').click(function(e) {
+    // Don't follow link if clicking on actual link element
+    if ($(e.target).is('a') || $(e.target).parents('a').length) {
+      return;
+    }
+
+    // Find the first link in the card (title link)
+    var link = $(this).find('.card-title').parent('a');
+    if (link.length > 0) {
+      var href = link.attr('href');
+      var target = link.attr('target');
+
+      if (href) {
+        if (target === '_blank') {
+          window.open(href, '_blank');
+        } else {
+          window.location.href = href;
+        }
+      }
+    }
+  });
+});</script>

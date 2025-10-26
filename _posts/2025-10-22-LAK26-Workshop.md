@@ -19,7 +19,7 @@ We live in an age of socio-technical uncertainty exacerbated by societal disagre
 Nonetheless, policy must still be made, and over the decades a number of different methods have emerged to support people in navigating uncertainty about how we might develop technology and the policies that surround its use. However, these methods are often developed to support the challenges of developing policy, including for example: the ethical development of the technology; how we might learn when to trust and critically use it; legal and ethical frameworks about how technology should be designed, developed and used; and participatory approaches to stakeholder engagement and how it might be improved. A number of projects are currently underway that are attempting to improve this situation, and this workshop will bring together people interested in moving policy making about the use of Artificial Intelligence and Data Analysis (AIDA) in educational settings towards more adaptive and anticipatory models.
 
 
-##Workshop Aims and details
+## Workshop Aims and details
 
 
 This workshop seeks to advance our methods for supporting educational stakeholders to productively collaborate with AIDA experts to improve policymaking in times of significant uncertainty. We will work to construct and publicly release a toolkit of services and approaches that can be used by those trying to support policy making, and evaluation,around the use of AIDA in educational settings. This toolkit will help people to work across boundaries of disciplinary knowledge, stakeholder expertise, ethics and trust.

@@ -20,7 +20,7 @@
 body {
   height: 100%;
   font-family: $body-font;
-  padding-top: 120px;
+  padding-top: 6rem;
 }
 
 main {
@@ -190,6 +190,7 @@ a.action-button:hover {
     .result {
       padding: 0.75rem 1rem;
       border-bottom: 1px solid #e3e3e3;
+      transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
 
       a {
         color: $dark-text;
@@ -214,7 +215,9 @@ a.action-button:hover {
       }
 
       &:hover {
-        background-color: $light-background;
+        background-color: #f8f9fa;
+        box-shadow: 0 5px 8px rgba(0,0,0,0.15);
+        transform: translateY(-2px);
       }
 
       &:last-child {
@@ -257,7 +260,7 @@ footer {
 
 .gallery-thumb {
   height: 15vh;
-  width: 120px;
+  width: 130px;
   object-fit: cover;
   object-position: 50% 0%;
 }
@@ -333,7 +336,7 @@ p.card-text {
   flex: 1;
   // margin-left: 2vh; // Match sidebar width
   // padding: 0 25px 20px 25px; // Top padding removed to align with search
-  min-height: calc(100vh - 60px - 10vh); // Proper height calculation
+  min-height: calc(100vh - 60px - 60vh); // Proper height calculation
   overflow: visible; // Changed from hidden
   position: relative;
 
@@ -608,9 +611,8 @@ fieldset {
 .wax-gallery .row {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin: 0;
-  width: 100%; // Full width
+  gap: 8px; // Reduced gap between cards
+  margin: 0; // Remove default margin
 
   // Ensure items take full width
   .gallery-item-facets {
@@ -618,140 +620,72 @@ fieldset {
     max-width: 100% !important;
     flex: none !important;
     padding: 0 !important;
-    margin-bottom: 8px;
-
-    .card {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      height: auto;
-      border: 1px solid #dee2e6;
-      border-radius: 8px;
-      overflow: hidden;
-      transition: box-shadow 0.2s ease;
-      margin-bottom: 0;
-      width: 100%; // Full width
-
-      &:hover {
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      }
-
-      &.has-external-link {
-        cursor: pointer;
-
-        &:hover {
-          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-          transform: translateY(-2px);
-        }
-      }
-    }
-
-    .card-img-top {
-      width: 140px;
-      min-width: 140px; // Prevent shrinking
-      height: 120px;
-      object-fit: cover;
-      border-radius: 0;
-      flex-shrink: 0;
-    }
-
-    .card-body {
-      flex: 1;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-
-    .card-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      line-height: 1.3;
-    }
-
-    .card-text {
-      font-size: 0.9rem;
-      color: #666;
-      line-height: 1.4;
-      margin-bottom: 0;
-
-      strong {
-        color: #333;
-        font-weight: 600;
-      }
-    }
+    margin-bottom: 8px; // Reduced margin
   }
-}
 
-.gallery-item-facets {
-  width: 100% !important;
-  max-width: none !important;
-  flex: none !important;
-  padding: 0 !important;
-  margin-bottom: 8px; // Reduced margin
-}
-
-.gallery-item-facets .card {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  height: auto;
-  border: 1px solid #dee2e6;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: box-shadow 0.2s ease;
-  margin-bottom: 0; // Remove any default margin
-
-  &:hover {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-}
-
-.gallery-item-facets .card {
-  &.has-external-link {
+  .gallery-item-facets .card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    margin-bottom: 0; // Remove any default margin
     cursor: pointer;
 
     &:hover {
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       transform: translateY(-2px);
+      background-color: #f8f9fa;
     }
   }
-}
 
-.gallery-item-facets .card-img-top {
-  width: 140px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 0;
-  flex-shrink: 0;
-}
+  .gallery-item-facets .card {
+    &.has-external-link {
+      cursor: pointer;
 
-.gallery-item-facets .card-body {
-  flex: 1;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transform: translateY(-2px);
+      }
+    }
+  }
 
-.gallery-item-facets .card-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
+  .gallery-item-facets .card-img-top {
+    width: 160px;
+    height: 140px;
+    object-fit: fill;
+    flex-shrink: 0;
+  }
 
-.gallery-item-facets .card-text {
-  font-size: 0.9rem;
-  color: #666;
-  line-height: 1.4;
-  margin-bottom: 0;
-}
+  .gallery-item-facets .card-body {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 
-.gallery-item-facets .card-text strong {
-  color: #333;
-  font-weight: 600;
+  .gallery-item-facets .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    line-height: 1.3;
+  }
+
+  .gallery-item-facets .card-text {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+
+  .gallery-item-facets .card-text strong {
+    color: #333;
+    font-weight: 600;
+  }
 }
 
 // Ensure gallery container has proper spacing alignment with search
@@ -766,23 +700,101 @@ fieldset {
   margin: 0;
 }
 
+h1.post-title {
+  margin-bottom: 2rem;
+}
+
+
+
+/*
+    NEWS LISTING STYLES
+*/
+.news-container {
+  max-width: 100%;
+  margin: 0 auto;
+
+  .col-12.mb-3 {
+    padding-left: 0;
+  }
+
+  .news-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .news-card-link:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .news-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+  }
+
+  .news-card-link:hover .news-card {
+    box-shadow: 0 5px 8px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+    background-color: #f8f9fa;
+  }
+
+  .news-card .card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .news-card .card-text {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  .news-date {
+    display: block;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 767.98px) {
+    .news-card .card-title {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+/*
+    LOGO SVG
+*/
+
+.site-title-img {
+  width: 100%;       /* fills the parent container */
+  max-width: 250px;  /* optional limit for large screens */
+  height: auto;      /* keeps correct aspect ratio */
+  display: block;    /* removes extra space below SVG */
+}
+
 /*
     RESPONSIVE DESIGN
 */
 @media (max-width: 767.98px) {
   body {
-    padding-top: 70px; // Match updated header height
+    padding-top: 6rem; // Match updated header height
   }
 
   main {
-    min-height: calc(100vh - 60px - 10vh);
-    padding: 1rem;
+    min-height: calc(100vh - 60px - 60vh);
+    padding: 0.5rem;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   body {
-    padding-top: 70px;
+    padding-top: 8rem;
   }
 
   // Adjust sidebar width for tablets
