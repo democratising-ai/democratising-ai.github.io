@@ -25,7 +25,7 @@ jobs:
         run: bundle install
 
       - name: Update search index
-        run: bundle exec rake wax:search
+        run: bundle exec rake wax:search main
 
       - name: Commit and push search index
         run: |
