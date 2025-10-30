@@ -31,7 +31,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "GitHub Actions Bot"
-          git add search_index.json
+          git add search/index.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
