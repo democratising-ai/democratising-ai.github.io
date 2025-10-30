@@ -1,0 +1,55 @@
+name: Import Papers from Zotero
+
+on:
+  # Manual trigger
+  workflow_dispatch:
+  # No schedule section
+
+jobs:
+  import-papers:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Cache pip packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyzotero python-slugify requests
+
+    - name: Run Zotero import
+      env:
+        ZOTERO_API_KEY: ${{ secrets.ZOTERO_API_KEY }}
+        ZOTERO_USER_ID: ${{ secrets.ZOTERO_USER_ID }}
+        ZOTERO_LIBRARY_TYPE: ${{ secrets.ZOTERO_LIBRARY_TYPE || 'group' }}
+      run: |
+        python scripts/zotero_import.py
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "GitHub Actions Bot"
+        git add _posts/
+        git add .github/processed_papers.json || true
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "📚 Import papers from Zotero [skip ci]"
+          git push
+        fi

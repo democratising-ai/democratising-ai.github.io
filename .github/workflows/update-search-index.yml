@@ -1,0 +1,39 @@
+name: Update Search Index
+
+on:
+    workflow_dispatch:   # allows manual triggering
+    push:
+        paths:
+        - '_posts/**'
+        - '_tools/**'
+        - '.github/processed_papers.json'
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4.2'
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Update search index
+        run: bundle exec rake wax:search
+
+      - name: Commit and push search index
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions Bot"
+          git add search_index.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🔍 Update search index [skip ci]"
+            git push

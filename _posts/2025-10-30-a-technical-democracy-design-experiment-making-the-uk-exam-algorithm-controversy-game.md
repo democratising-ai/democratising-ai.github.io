@@ -1,0 +1,17 @@
+---
+title: "A technical democracy design experiment: Making the UK exam algorithm controversy game"
+date: 2025-10-30
+year: 2024
+layout: post
+doi: "10.1016/j.destud.2024.101245"
+source_url: "https://linkinghub.elsevier.com/retrieve/pii/S0142694X24000085"
+citation: "Swist, T., Gulson, K.N., Benn, C., Kitto, K., Knight, S., & Zhang, V.. (2024). A technical democracy design experiment: Making the UK exam algorithm controversy game. *Design Studies*, *91-92*, 101245. https://doi.org/10.1016/j.destud.2024.101245."
+---
+
+### Abstract
+
+Algorithmic system controversies are increasingly issues of concern for diverse publics plus a growing design challenge. For example, the 2020 UK exam controversy sparked wide-spread public debate about the role of algorithms in regard to not only student grading systems, but also the design of automated systems in the public sector. In light of this particular controversy, our study introduces a technical democracy design experiment to examine algorithmic system controversies. We propose an iterative, collaborative design process specific to the study of algorithmic systems which informs our collaborative making of the UK exam algorithm game: a prototype to explore controversies, generate design things, deliberate ethical tensions, and spark thought collectives. This socio-technical acts of contestation model offers a novel and adaptable tool to interrupt public sector design possibilities in two key ways: first, to expand collective learning and experimentation about the political design of algorithmic system controversies; and, second, to support agonistic design thinging about emerging technologies associated with high stakes decision-making across society.
+
+---
+
+*This post summarizes a research paper. The full paper is [available here](https://doi.org/10.1016/j.destud.2024.101245).*

@@ -157,9 +157,10 @@
 
                   {% if include.collection == 'posts' %}
                   <p class="card-text">
-                    {% if item.excerpt %}
-                    {{ item.excerpt | strip_html | truncatewords: 30 }}
-                    {% endif %}
+                    {% assign abstract_text = item.content | split: "### Abstract" | last %}
+                    {% assign abstract_text = abstract_text | strip_html | strip_newlines | strip %}
+                    {% assign abstract_text = abstract_text | remove_first: "Abstract" | strip %}
+                    <span class="abstract">{{ abstract_text | truncatewords: 50 }}</span>
 
                     {% if item.user_group %}
                     <strong>For:</strong>

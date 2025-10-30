@@ -8,6 +8,10 @@ layout: default
     </header>
 
     <div class="post-content">
+        {% if page.citation %}
+        <p class="citation">{{ page.citation }}</p>
+        {% endif %}
+
         {{ content }}
     </div>
 </article>
