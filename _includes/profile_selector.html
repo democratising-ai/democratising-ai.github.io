@@ -89,9 +89,9 @@
     <div>
       <button
         type="button"
+        id="browse-tools-btn"
         class="btn btn-outline-primary gap-4"
         style="min-width: 45px; min-height: 45px; text-align: center;"
-        onclick="window.location.href='/learn-and-toolkit/';"
       >
         Browse Tools
       </button>
@@ -215,6 +215,20 @@
         }
       });
     }
+
+    // Handle Browse Tools button click
+    $('#browse-tools-btn').click(function() {
+      var currentUserGroup = UserProfile.getCurrentUserGroup();
+      var targetUrl = '/learn-and-toolkit/';
+
+      if (currentUserGroup) {
+        var url = new URL(targetUrl, window.location.origin);
+        url.searchParams.set('usergroup', currentUserGroup);
+        window.location.href = url.toString();
+      } else {
+        window.location.href = targetUrl;
+      }
+    });
 
     function activateUserGroup(userGroup) {
       var card = $('.profile-card[data-usergroup="' + userGroup + '"]');
