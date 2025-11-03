@@ -17,7 +17,7 @@
 
 {% comment %}- EXCLUDE SPECIFIC TYPE -{% endcomment %}
 {% if include.exclude_type %}
-  {% assign collection = collection | reject: "type", include.exclude_type %}
+  {% assign collection = collection | where_exp: "item", "item.type != include.exclude_type" %}
 {% endif %}
 
 <div class="full-width-gallery-layout">
