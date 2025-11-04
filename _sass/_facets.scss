@@ -781,20 +781,237 @@ h1.post-title {
 /*
     RESPONSIVE DESIGN
 */
-@media (max-width: 767.98px) {
-  body {
-    padding-top: 6rem; // Match updated header height
+// Mobile S (320px - 575px)
+@media (max-width: 575.98px) {
+  .sidebar-filters-external {
+    width: 100%;
+    min-width: auto;
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+    padding: 8px;
   }
 
-  main {
-    min-height: calc(100vh - 60px - 60vh);
-    padding: 0.5rem;
+  .main-content-with-sidebar {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .full-width-gallery-layout {
+    flex-direction: column;
+    width: 100%;
+    position: static;
+    left: auto;
+    right: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  // Compact filters for small screens
+  .filters-title {
+    font-size: 0.8rem;
+    margin-left: 8px;
+  }
+
+  .facet-card .card-body {
+    padding: 0.3rem 0.5rem;
+  }
+
+  .facet-bn {
+    padding: 0.3rem 0.4rem !important;
+    font-size: 0.75rem;
+  }
+
+  .facet-item {
+    padding: 0;
+
+    label {
+      font-size: 0.7rem;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(0.75);
+    }
+  }
+
+  // Stack cards vertically
+  .gallery-item-facets .card {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .gallery-item-facets .card-img-top {
+    width: 100%;
+    height: 150px;
+  }
+
+  .gallery-item-facets .card-body {
+    padding: 0.75rem;
+  }
+
+  .gallery-item-facets .card-title {
+    font-size: 0.95rem;
+  }
+
+  .gallery-item-facets .card-text {
+    font-size: 0.8rem;
+  }
+
+  // Active filters compact
+  #active-filters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 6px 8px;
+
+    h5 {
+      font-size: 0.8rem;
+      margin-bottom: 4px;
+    }
+
+    #filter-badges {
+      width: 100%;
+    }
+
+    .filter-badge {
+      font-size: 0.7rem;
+      padding: 2px 5px;
+      margin: 2px;
+    }
+
+    #clear-all-filters {
+      font-size: 0.7rem;
+      padding: 2px 5px;
+    }
+  }
+
+  // Search box
+  .search-block {
+    padding: 10px !important;
+    margin: 10px 0 !important;
+  }
+
+  .responsive-text {
+    font-size: 1rem;
+  }
+}
+
+// Mobile M (576px - 767px)
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+  .banner .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .banner .navbar-brand {
+    margin-bottom: 0.5rem;
+  }
+
+  .banner .navbar-nav {
+    align-items: center;
+  }
+
+  .sidebar-filters-external {
+    width: 100%;
+    min-width: auto;
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .main-content-with-sidebar {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .full-width-gallery-layout {
+    flex-direction: column;
+    width: 100%;
+    position: static;
+    left: auto;
+    right: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .filters-sticky {
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .filters-title {
+    font-size: 0.85rem;
+  }
+
+  .facet-bn {
+    font-size: 0.8rem;
+  }
+
+  .facet-item label {
+    font-size: 0.75rem;
+  }
+
+  // Cards still stacked but slightly larger
+  .gallery-item-facets .card {
+    flex-direction: column;
+  }
+
+  .gallery-item-facets .card-img-top {
+    width: 100%;
+    height: 180px;
+  }
+
+  .gallery-item-facets .card-body {
+    padding: 0.85rem;
+  }
+
+  .gallery-item-facets .card-title {
+    font-size: 1rem;
+  }
+
+  .gallery-item-facets .card-text {
+    font-size: 0.85rem;
+  }
+
+  #active-filters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+
+    h5 {
+      font-size: 0.85rem;
+    }
+
+    .filter-badge {
+      font-size: 0.75rem;
+    }
+  }
+
+  .responsive-text {
+    font-size: 2rem;
+  }
+
+  .wax-gallery .row .gallery-item-facets .card-img-top {
+    width: 120px;
+    height: 120px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  body {
-    padding-top: 8rem;
+  main {
+    min-height: calc(100vh - 60px - 60vh);
+    padding: 0.5rem;
+  }
+
+  .responsive-text {
+    font-size: 3rem;
   }
 
   // Adjust sidebar width for tablets
@@ -806,9 +1023,70 @@ h1.post-title {
   .main-content-with-sidebar {
     margin-left: 180px;
   }
+
+  .wax-gallery .row .gallery-item-facets .card-img-top {
+    width: 120px;
+    height: 120px;
+  }
 }
 
-// Mobile layout for sidebar
+// Laptop screens
+@media (min-width: 992px) and (max-width: 1400px) {
+  // Reduce sidebar width
+  .sidebar-filters-external {
+    width: 160px;
+    min-width: 160px;
+    font-size: 0.85rem;
+  }
+
+  // Make filter text more compact
+  .filters-title {
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+
+  .facet-bn {
+    padding: 0.3rem 0.5rem !important;
+    font-size: 0.8rem;
+  }
+
+  .facet-card .card-body {
+    padding: 0.4rem 0.6rem;
+  }
+
+  .facet-item label {
+    font-size: 0.7rem;
+  }
+
+  legend {
+    font-size: 0.8rem;
+  }
+
+  // Make cards more compact in gallery
+  .card-body {
+    padding: 0.75rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+  }
+
+  .card-img-top {
+    width: 120px;
+    height: 120px;
+  }
+
+  .wax-gallery .row .gallery-item-facets .card-img-top {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+// Mobile
 @media (max-width: 991.98px) {
   .full-width-gallery-layout {
     flex-direction: column;
@@ -863,16 +1141,10 @@ h1.post-title {
     flex-direction: column;
 
     .card-img-top {
-      width: 100%;
-      height: 200px;
+      width: 120px;
+      height: 120px;
     }
   }
-}
-
-// Ensure proper z-index hierarchy
-.navbar .dropdown-menu {
-  position: absolute;
-  z-index: 1051;
 }
 
 // Page-specific adjustments
