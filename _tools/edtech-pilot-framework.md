@@ -2,7 +2,7 @@
 title: "EdTech Pilot Framework"
 external_link: "https://digitalpromise.org/edtech-pilot-framework/"
 user_group:
-  - government-officials
+  - policymakers
   - school-leaders
   - educators
 technology:

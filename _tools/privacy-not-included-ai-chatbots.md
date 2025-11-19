@@ -6,7 +6,7 @@ user_group:
   - students
   - educators
   - school-leaders
-  - government-officials
+  - policymakers
 technology:
   - chatbots
   - genai

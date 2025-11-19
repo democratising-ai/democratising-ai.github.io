@@ -124,7 +124,7 @@ layout: none
     "title": "EdTech Pilot Framework",
     "external_link": "https://digitalpromise.org/edtech-pilot-framework/",
     "user_group": [
-      "government-officials",
+      "policymakers",
       "school-leaders",
       "educators"
     ],
@@ -176,7 +176,7 @@ layout: none
       "students",
       "educators",
       "school-leaders",
-      "government-officials"
+      "policymakers"
     ],
     "technology": [
       "chatbots",
