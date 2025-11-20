@@ -1,6 +1,6 @@
 ---
 title: "AI Policy Dashboard"
-internal_link: "/ai-policy-dashboard/"
+permalink: /ai-policy-dashboard/
 user_group:
   - policymakers
   - school-leaders
