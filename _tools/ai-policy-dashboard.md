@@ -12,6 +12,7 @@ experience:
   - resource-library
 challenges:
   - policy
+thumbnail: "/assets/thumbnails/ai-policy-dashboard.png"
 description: "Welcome to the Education and AI Policy Commons, a platform designed for education researchers and policymakers. It draws on the OECD's AI Policy Observatory, with a focus on AI and education."
 ---
 
