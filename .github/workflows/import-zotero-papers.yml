@@ -5,6 +5,9 @@ on:
   workflow_dispatch:
   # No schedule section
 
+permissions:
+  contents: write
+
 jobs:
   import-papers:
     runs-on: ubuntu-latest
