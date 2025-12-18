@@ -99,6 +99,28 @@ layout: none
     "lunr_id": 7
   },
   {
+    "title": "AI Policy Dashboard",
+    "permalink": "/ai-policy-dashboard/",
+    "user_group": [
+      "policymakers"
+    ],
+    "technology": [
+      "edtech",
+      "ai"
+    ],
+    "experience": [
+      "policy-tool",
+      "resource-library"
+    ],
+    "challenges": [
+      "policy"
+    ],
+    "thumbnail": "/assets/thumbnails/ai-policy-dashboard.png",
+    "description": "Welcome to the Education and AI Policy Commons, a platform designed for education researchers and policymakers. It draws on the OECD's AI Policy Observatory, with a focus on AI and education.",
+    "content": " Welcome to the Education and AI Policy Commons, a platform designed for education researchers and policymakers. It draws on the OECD's AI Policy Observatory, with a focus on AI and education. ",
+    "lunr_id": 8
+  },
+  {
     "title": "Data Literacy Resources",
     "external_link": "https://edutrust.slateresearch.ai/teaching-resources/",
     "user_group": [
@@ -118,14 +140,13 @@ layout: none
     "description": "A set of game based resources to help teachers teach basic data literacy",
     "content": " A set of game based resources to help teachers teach basic data literacy through interactive games and activities. ",
     "permalink": "/tools/",
-    "lunr_id": 8
+    "lunr_id": 9
   },
   {
     "title": "EdTech Pilot Framework",
     "external_link": "https://digitalpromise.org/edtech-pilot-framework/",
     "user_group": [
       "policymakers",
-      "school-leaders",
       "educators"
     ],
     "technology": [
@@ -142,7 +163,7 @@ layout: none
     "description": "A step by step process to help you run successful EdTech pilots",
     "content": " A step by step process to help you run successful EdTech pilots and make informed technology decisions. ",
     "permalink": "/tools/",
-    "lunr_id": 9
+    "lunr_id": 10
   },
   {
     "title": "GenAI Arcade",
@@ -166,7 +187,7 @@ layout: none
     "description": "Playful learning about GenAI and how it works",
     "content": " Playful learning about GenAI and how it works. An interactive game experience for understanding generative AI. ",
     "permalink": "/tools/",
-    "lunr_id": 10
+    "lunr_id": 11
   },
   {
     "title": "Privacy Not Included: Protect Your Privacy from AI Chatbots",
@@ -175,7 +196,6 @@ layout: none
       "parents",
       "students",
       "educators",
-      "school-leaders",
       "policymakers"
     ],
     "technology": [
@@ -192,7 +212,7 @@ layout: none
     "description": "Tips for protecting your privacy when using different AI Chatbots",
     "content": " Tips for protecting your privacy when using different AI Chatbots like ChatGPT and others. ",
     "permalink": "/tools/",
-    "lunr_id": 11
+    "lunr_id": 12
   },
   {
     "title": "Privacy Not Included: Tips for Back to School Shopping",
@@ -213,7 +233,7 @@ layout: none
     "description": "Tips for choosing products that protect your child's privacy",
     "content": " Tips for choosing products that protect your child's privacy during back-to-school shopping season. ",
     "permalink": "/tools/",
-    "lunr_id": 12
+    "lunr_id": 13
   },
   {
     "title": "UK Exam Algorithm Controversy Game",
@@ -238,6 +258,6 @@ layout: none
     "description": "An exploration of a complex topic - what would you have done?",
     "content": " An exploration of a complex topic - what would you have done? Interactive game exploring the UK's 2020 exam algorithm controversy. ",
     "permalink": "/tools/",
-    "lunr_id": 13
+    "lunr_id": 14
   }
 ]
