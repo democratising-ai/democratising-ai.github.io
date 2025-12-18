@@ -3,7 +3,6 @@ title: "AI Policy Dashboard"
 permalink: /ai-policy-dashboard/
 user_group:
   - policymakers
-  - school-leaders
 technology:
   - edtech
   - ai

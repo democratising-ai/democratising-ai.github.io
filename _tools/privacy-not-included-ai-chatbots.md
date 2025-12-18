@@ -5,7 +5,6 @@ user_group:
   - parents
   - students
   - educators
-  - school-leaders
   - policymakers
 technology:
   - chatbots
