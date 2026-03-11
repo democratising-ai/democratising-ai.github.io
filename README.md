@@ -6,6 +6,7 @@ A Jekyll-based blog and resource platform exploring AI, technology, and society 
 
 This site explores the intersection of AI and education, providing resources and insights for:
 
+- **Policymakers** shaping AI governance and regulation
 - **Educators** integrating AI into teaching and curriculum
 - **Parents** navigating AI tools in family life
 - **Students** growing up surrounded by intelligent systems
@@ -29,6 +30,7 @@ The site organizes content around three main facets:
 
 #### User Groups
 
+- Policymakers
 - Educators
 - Parents
 - Students
@@ -62,6 +64,7 @@ technology:
   - technology1
   - technology2
 user_group:
+  - policymakers
   - educators
   - parents
   - students
@@ -89,7 +92,7 @@ The site is automatically deployed via GitHub Pages when changes are pushed to t
 
 ## License
 
-This project is open source. See LICENSE.txt for details.
+This project is under MIT License. See [LICENSE](LICENSE) for details.
 
 ## Contributing
 
